@@ -28,6 +28,8 @@ header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;
 .header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
 .back{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
 .back:hover{color:var(--ink);border-color:var(--accent)}
+.btn{display:inline-block;padding:8px 12px;border-radius:999px;font-size:12px;border:1px solid var(--line);color:var(--ink);background:transparent;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--accent)}
 .hero{padding:28px 0 8px}
 .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 h1{font-family:var(--serif);font-size:clamp(30px,5.8vw,48px);font-weight:400;line-height:1.1;margin-bottom:14px}
@@ -53,13 +55,13 @@ footer p{margin:6px 0}
     <span class="mark-quay">QUAY</span>
   </a>
   <div class="header-right">
+    <a class="btn" href="https://chatting.elghaly.dev">💬 Chatting by elghaly</a>
     <a class="back" href="../index.html">All products</a>
   </div>
 </header>
 
 <section class="hero">
   <p class="eyebrow">QUAY · Hold</p>
-  <div class="page-menu" data-page-menu style="display:flex;justify-content:flex-end;min-height:46px;margin:0 0 .5rem"></div>
   <h1>What QUAY will not build.</h1>
   <p class="lede">These come up often. Here is why the answer is no, and what would have to change.</p>
 </section>
@@ -87,11 +89,10 @@ footer p{margin:6px 0}
 
 <footer>
   <p><a href="../index.html">All products</a> · <a href="fees.html">Fee review</a></p>
-  <p>Mail · elghaly, LLC, 548 Market St, San Francisco, CA 94104, United States</p>
+  <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
   <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="/#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
 <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a></p>
 </footer>
 </div>
-<script src="/page-menu.js" defer></script>
 </body>
 </html>

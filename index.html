@@ -43,7 +43,8 @@ h1{font-family:var(--serif);font-size:clamp(38px,6.4vw,62px);font-weight:400;lin
 .btn:hover{border-color:var(--accent)}
 .btn.primary{background:var(--accent);color:#04110a;border-color:var(--accent)}
 .btn.primary:hover{filter:brightness(1.08)}
-.art{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#050508;aspect-ratio:1168/784}
+.art{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#050508;aspect-ratio:1080/1350}
+.art.below-cards{max-width:520px;margin:28px auto 0}
 .art img{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:820px){.art{max-width:520px}}
 /* trust strip */
@@ -160,6 +161,7 @@ footer p{margin:4px 0}
     <span class="grad mark-quay">QUAY</span>
   </a>
   <div class="header-right">
+    <a class="btn" href="https://chatting.elghaly.dev">💬 Chatting by elghaly</a>
     <div class="lang-switch" id="langs" aria-label="Language">
       <button class="lang-btn on" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="ar">AR</button>
@@ -174,7 +176,6 @@ footer p{margin:4px 0}
 <div class="hero">
   <div>
     <p class="eyebrow">35 · QUAY · ElGhaly</p>
-    <div class="page-menu" data-page-menu style="display:flex;justify-content:flex-end;min-height:46px;margin:0 0 .5rem"></div>
     <h1>Reports a desk can sell. Not another empty chart.</h1>
     <p class="lede">QUAY works from public data and the text you send — signatures, a mint, a feed — and sends back a page, a card or a ping. You buy a file, a card or a watch, not a token. We never hold keys.</p>
     <div class="cta">
@@ -182,12 +183,12 @@ footer p{margin:4px 0}
       <a class="btn" href="/quay/fees.html">Start with the $199 fee review</a>
     </div>
   </div>
-  <figure class="art"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
+  <figure class="art"><img width="1080" height="1350" src="quay-1080x1350.png" alt="QUAY — 35 ElGhaly"/></figure>
 </div>
 <ul class="trust">
   <li><span class="tick" aria-hidden="true">✓</span><span><b>Public data in</b>No keys, no seed phrase, no wallet access. Ever.</span></li>
   <li><span class="tick" aria-hidden="true">✓</span><span><b>Refund any time</b>No form, no reason, no time limit. <a href="#refunds">How</a></span></li>
-  <li><span class="tick" aria-hidden="true">✓</span><span><b>A real company</b>elghaly, LLC · 548 Market St, San Francisco. <a href="#where">Where we are</a></span></li>
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>A real company</b>elghaly, LLC. <a href="#where">Where we are</a></span></li>
 </ul>
 
 <section id="how" aria-labelledby="how-h">
@@ -226,6 +227,7 @@ footer p{margin:4px 0}
       <div class="buy"><a class="btn" href="mailto:support@elghaly.dev?subject=QUAY%20%E2%80%94%20which%20product%3F">Ask first</a></div>
     </article>
   </div>
+  <figure class="art below-cards"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
   <p class="recourse">A PayPal payment, here or through the shop checkout, can be disputed through PayPal; a card payment through the shop, through your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
 </section>
 
@@ -242,7 +244,7 @@ footer p{margin:4px 0}
     </div>
     <div class="panel" id="where">
       <h2>Where we are</h2>
-      <p><strong>Mail ·</strong> elghaly, LLC, 548 Market St, San Francisco, CA 94104, United States. Post reaches us there.</p>
+      <p><strong>elghaly, LLC</strong> · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
       <p>QUAY is a remote desk. Support is by email, and the handover call is scheduled to your timezone, not ours. There is no counter to walk into, so hold us to the things you can actually test instead:</p>
       <ul class="where-list">
         <li>The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.</li>
@@ -270,7 +272,7 @@ footer p{margin:4px 0}
 </section>
 </main>
 <footer>
-  <p>elghaly, LLC · 548 Market St, San Francisco, CA 94104, United States · <a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
+  <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
   <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
 <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-assisted analysis of public pages</span></p>
 </footer>
@@ -300,6 +302,5 @@ window.addEventListener('hashchange',openWallets); openWallets();
   });
 })();
 </script>
-<script src="/page-menu.js" defer></script>
 </body>
 </html>

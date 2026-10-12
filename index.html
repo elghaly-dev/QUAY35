@@ -161,14 +161,12 @@ footer p{margin:4px 0}
     <span class="grad mark-quay">QUAY</span>
   </a>
   <div class="header-right">
-    <a class="btn" href="https://chatting.elghaly.dev">💬 Chatting by elghaly</a>
+    <a class="btn" href="https://chatting.elghaly.dev/" data-quay-chatting>💬 Chatting by elghaly</a>
     <div class="lang-switch" id="langs" aria-label="Language">
       <button class="lang-btn on" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="ar">AR</button>
       <button class="lang-btn" data-lang="ru">RU</button>
       <button class="lang-btn" data-lang="zh">ZH</button>
-      <button class="lang-btn" data-lang="de">DE</button>
-      <button class="lang-btn" data-lang="es">ES</button>
     </div>
   </div>
 </header>
@@ -227,7 +225,7 @@ footer p{margin:4px 0}
       <div class="buy"><a class="btn" href="mailto:support@elghaly.dev?subject=QUAY%20%E2%80%94%20which%20product%3F">Ask first</a></div>
     </article>
   </div>
-  <figure class="art below-cards"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY ElGhaly"/></figure>
+  <figure class="art below-cards"><img width="1168" height="784" src="IMG_6895.jpeg" alt="35 QUAY elghaly" loading="lazy" decoding="async"/></figure>
   <p class="recourse">A PayPal payment, here or through the shop checkout, can be disputed through PayPal; a card payment through the shop, through your card issuer. A wallet transfer cannot. Same product, different recourse.</p>
 </section>
 
@@ -244,7 +242,7 @@ footer p{margin:4px 0}
     </div>
     <div class="panel" id="where">
       <h2>Where we are</h2>
-      <p><strong>elghaly, LLC</strong> · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
+      <p data-quay-contact><strong>elghaly, LLC</strong> · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
       <p>QUAY is a remote desk. Support is by email, and the handover call is scheduled to your timezone, not ours. There is no counter to walk into, so hold us to the things you can actually test instead:</p>
       <ul class="where-list">
         <li>The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.</li>
@@ -272,7 +270,7 @@ footer p{margin:4px 0}
 </section>
 </main>
 <footer>
-  <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
+  <p data-quay-contact>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
   <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
 <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-assisted analysis of public pages</span></p>
 </footer>
@@ -289,18 +287,7 @@ document.addEventListener('click',function(e){
 // A link to #wallets opens the collapsed wallet panel.
 function openWallets(){ if(location.hash==='#wallets'){ var d=document.getElementById('wallets'); if(d) d.open=true; } }
 window.addEventListener('hashchange',openWallets); openWallets();
-(function(){
-  var map={en:{h:'Reports a desk can sell. Not another empty chart.',l:'You buy a file, a card, or a watch — not a token.'},ar:{h:'تقارير للمكتب.',l:'ملف أو كارت. مش توكن.'},ru:{h:'Отчёты для стола.',l:'Файл или карта. Не токен.'},zh:{h:'能卖的报告.',l:'文件或卡，不是代币。'},de:{h:'Reports für den Desk.',l:'Datei oder Karte. Kein Token.'},es:{h:'Informes para el desk.',l:'Archivo o tarjeta. No un token.'}};
-  var en={h:document.querySelector('h1').textContent,l:document.querySelector('.lede').textContent};
-  document.getElementById('langs').addEventListener('click',function(e){
-    var b=e.target.closest('[data-lang]'); if(!b) return;
-    var k=b.getAttribute('data-lang'); var t=k==='en'?en:map[k]; if(!t) return;
-    document.querySelectorAll('.lang-btn').forEach(function(x){x.classList.toggle('on',x===b);});
-    document.querySelector('h1').textContent=t.h;
-    document.querySelector('.lede').textContent=t.l;
-    document.documentElement.lang=k; document.documentElement.dir=k==='ar'?'rtl':'ltr';
-  });
-})();
 </script>
+<script src="/page-menu.js" defer></script>
 </body>
 </html>

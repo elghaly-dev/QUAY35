@@ -1,115 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Thank you — QUAY · 35 ElGhaly</title>
 <meta name="description" content="PayPal has your payment. Send your brief to support@elghaly.dev with your PayPal transaction ID."/>
 <meta name="robots" content="noindex,nofollow"/>
-<meta name="theme-color" content="#07090b"/>
+<meta name="theme-color" content="#5a4fc0"/>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-<style>
-:root{--bg:#07090b;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#0f1418;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
-.wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
-a{color:var(--accent);text-decoration:none}
-/* Links inside running text are underlined, as on elghaly.dev: by colour
-   alone they were too close to the words around them (axe link-in-text-block). */
-p a:not(.btn),li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
-p a:not(.btn):hover,li a:not(.btn):hover,p a:not(.btn):focus-visible,li a:not(.btn):focus-visible{text-decoration-color:currentColor}
-header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(7,9,11,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
-.qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:var(--accent)}
-.mark-35{font-size:24px;font-weight:700;color:var(--ink)}
-.mark-quay{font-size:15px;letter-spacing:.22em;font-weight:700;color:var(--accent)}
-.header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.back{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
-.back:hover{color:var(--ink);border-color:var(--accent)}
-.hero{padding:28px 0 8px}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-h1{font-family:var(--serif);font-size:clamp(30px,5.8vw,48px);font-weight:400;line-height:1.1;margin-bottom:14px}
-h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
-.lede{color:var(--muted);font-size:15px;max-width:62ch}
-.lede+.lede{margin-top:10px}
-.section{margin-top:36px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media(max-width:720px){.grid{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
-.card h3{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 12px}
-.card p,.card li{font-size:14px;color:var(--muted)}
-.card ul{margin:0 0 0 18px}
-.card li{margin:8px 0}
-.card li strong{color:var(--ink);font-weight:600}
-.note{font-size:13px;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
-.warn{margin-top:36px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(46,230,199,.04)}
-.warn h2{color:var(--ink)}
-.warn p,.warn li{font-size:14px;color:var(--muted)}
-.warn ul{margin:10px 0 0 18px}
-.warn li{margin:6px 0}
-.rule{margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:13px;color:var(--ink);background:rgba(7,9,11,.6)}
-.sample{margin-top:36px}
-.sample-banner{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.report-sheet{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:24px;font-size:13px;color:var(--muted)}
-.report-sheet h3{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);margin:0 0 16px}
-.report-row{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.report-row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.report-row.single{grid-template-columns:1fr}
-.report-row dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.report-row dd{color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-.redacted{color:var(--muted);font-style:italic;font-family:var(--sans)}
-.price-block{margin-top:36px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
-.price-block .price{font-size:28px;font-family:var(--serif);color:var(--accent);margin:8px 0 6px}
-.price-block .price-note{font-size:14px;color:var(--muted);margin-bottom:18px}
-.price-block p{font-size:14px;color:var(--muted);margin-bottom:12px}
-.refunds-block{margin-top:18px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
-.refunds-block h2{font-family:var(--serif);font-size:22px;font-weight:400;margin:0 0 12px}
-.refunds-block p{font-size:14px;color:var(--muted);margin:0 0 12px}
-.refunds-block p:last-child{margin-bottom:0}
-.disclaimer{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6}
-.btn{display:inline-block;padding:11px 16px;border-radius:999px;font-size:13px;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--sans);text-decoration:none}
-.btn.primary{background:var(--accent);color:#04110a;border:0;font-weight:600}
-.btn:hover{opacity:.92}
-.pay-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-footer p{margin:6px 0}
-</style>
-<style id="lic-badges-css">.lic-badges{margin:.75rem 0 0;font-size:.75rem;line-height:1.2}.lic-badges>a,.lic-badges>span{display:inline-flex;align-items:center;min-height:24px;margin:.2rem .15rem;padding:0 .6rem;border:1px solid currentColor;border-radius:999px;color:inherit;vertical-align:middle}.lic-badges>a{text-decoration:underline;text-underline-offset:2px}.lic-badges>span{text-decoration:none}</style>
+<link rel="stylesheet" href="../css/quay-glass.css"/>
+<link rel="stylesheet" href="../css/quay-site.css"/>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <a class="brand" href="../index.html">
-    <span class="qmark">Q</span>
-    <span class="mark-35">35</span>
-    <span class="mark-quay">QUAY</span>
-  </a>
-  <div class="header-right">
-    <a class="btn" href="https://chatting.elghaly.dev">💬 Chatting by elghaly</a>
-    <a class="back" href="../index.html">All products</a>
+<a class="skip" href="#main">Skip to main content</a>
+<nav class="nav" aria-label="Site">
+  <div class="nav__in">
+    <a class="brand brand--quay" href="/">QUAY</a>
+    <span class="badge-35" aria-hidden="true"><span class="badge-35__dot">●</span> 35</span>
+    <div class="nav__links nav__links--quay nav__links--always">
+      <a href="/#products">Products</a>
+      <a href="/quay/fees.html">Fee review</a>
+      <a href="/quay/hold.html">Hold</a>
+    </div>
+    <span class="nav__spacer" aria-hidden="true"></span>
+    <a class="btn btn--sm btn--dark" href="https://chatting.elghaly.dev">💬 Chatting</a>
+    <div class="lang-switch" aria-label="Language">
+      <a class="lang-btn" href="/quay/thanks.html" aria-current="page">EN</a>
+      <a class="lang-btn" href="/ar/quay/thanks.html">AR</a>
+      <a class="lang-btn" href="/ru/quay/thanks.html">RU</a>
+      <a class="lang-btn" href="/zh/quay/thanks.html">ZH</a>
+    </div>
   </div>
-</header>
-
-<section class="hero">
-  <p class="eyebrow">QUAY · Payment</p>
+</nav>
+<div class="page prose">
+<main id="main">
+<section class="sub-hero">
+  <p class="kicker">QUAY · Payment</p>
   <h1>PayPal has your payment</h1>
-  <p class="lede">Send your brief to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> with your PayPal transaction ID. We start once the payment shows in PayPal.</p>
+  <p class="quay-hero__lede">Send your brief to <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> with your PayPal transaction ID. We start once the payment shows in PayPal.</p>
 </section>
 
-<section class="refunds-block">
-  <h2>What to put in the brief</h2>
-  <p>The product you paid for, your PayPal transaction ID, and what the product page asks you to send — for the fee review, the signatures and settings listed on <a href="fees.html">its page</a>.</p>
-  <p>Refunds follow <a href="../index.html#refunds">our refund policy</a>. A PayPal payment can also be disputed through PayPal.</p>
+<section class="card panel">
+  <div class="card__body">
+    <h2 class="section__title">What to put in the brief</h2>
+    <p>The product you paid for, your PayPal transaction ID, and what the product page asks you to send — for the fee review, the signatures and settings listed on <a href="/quay/fees.html">its page</a>.</p>
+    <p>Refunds follow <a href="/#refunds">our refund policy</a>. A PayPal payment can also be disputed through PayPal.</p>
+  </div>
 </section>
-
-<footer>
+</main>
+<footer class="footer">
   <p><a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
   <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
-  <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="../index.html#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
-<p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-assisted analysis of public on-chain data</span></p>
+  <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="/#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-assisted analysis of public on-chain data</span></p>
 </footer>
 </div>
 </body>

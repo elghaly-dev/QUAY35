@@ -1,0 +1,1419 @@
+/* elghaly.dev home, /plumb and /quay: palette 5b.
+   A soft indigo-purple page, solid near-black cards, white bold headings,
+   lavender for the quieter text on cards, and light indigo (token --gold, #c9c2ff) for the one thing to
+   press on each screen. Lavender is for cards only: on the purple it is
+   3.2:1, so text on the purple is white (5:1 or more).
+   Phones first: everything below is the iPhone layout, and the
+   min-width queries widen it. Inlined into each page by
+   tools/site-kit/sitekit.py, so this file is the one to edit. */
+
+/* Fonts are served from /fonts (SIL OFL 1.1, see fonts/OFL-*.txt). */
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/outfit-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/outfit-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/outfit-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  /* Cairo for Arabic letters only; unicode-range means only a page
+     showing Arabic downloads it. */
+  font-family: "Cairo";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+  src: url("/fonts/cairo-arabic-wght.woff2") format("woff2");
+  unicode-range: U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;
+}
+@font-face {
+  /* Cinzel, for the ELGHALY wordmark only: the six capitals it draws. */
+  font-family: "Cinzel Wordmark";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/cinzel-500-wordmark.woff2") format("woff2");
+  unicode-range: U+0041,U+0045,U+0047,U+0048,U+004C,U+0059;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #5a4fc0;
+  --bg-2: #6a5fd0;
+  --card: #0d0b1f;
+  --card-2: #17142f;
+  --line: #1c1838;
+  --line-2: #2e2856;
+  --text: #ffffff;
+  --muted: #b9b3e6;
+  --gold: #c9c2ff;
+  --gold-2: #e2deff;
+  --gold-ink: #17123d;
+  --pos: #7be3b0; /* mint: small positive numbers only, and sparingly */
+  --on-bg-line: rgba(255, 255, 255, 0.2);
+  --shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 40px -20px rgba(16, 10, 58, 0.6);
+  --shadow-hi: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 26px 52px -22px rgba(16, 10, 58, 0.75);
+  --radius: 22px;
+  --radius-sm: 20px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --font: "Outfit", "Cairo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 72rem;
+  --gutter: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  color: var(--text);
+  font: 400 1.0625rem/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* The page colour: a fixed layer, because background-attachment: fixed
+   is ignored on iPhone. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--text);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--gold-ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+/* ── top bar ─────────────────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(90, 79, 192, 0.94);
+  border-bottom: 1px solid var(--on-bg-line);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .nav {
+    background: rgba(90, 79, 192, 0.78);
+    -webkit-backdrop-filter: saturate(160%) blur(16px);
+    backdrop-filter: saturate(160%) blur(16px);
+  }
+}
+
+.nav__in {
+  max-width: var(--max);
+  min-height: 60px;
+  margin: 0 auto;
+  padding: 0.5rem var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand {
+  flex: none;
+  font-family: "Cinzel Wordmark", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.nav__links {
+  display: none;
+  gap: 0.25rem;
+  margin-inline-start: auto;
+}
+
+.nav__links a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.nav__links a:hover,
+.nav__links a[aria-current="page"] {
+  background: var(--card);
+}
+
+.nav__shop {
+  margin-inline-start: auto;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  margin-inline-start: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lang-switch::-webkit-scrollbar {
+  display: none;
+}
+
+.lang-btn {
+  flex: none;
+  min-width: 40px;
+  min-height: 36px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: 500 12px var(--font);
+  cursor: pointer;
+}
+
+.lang-btn[aria-pressed="true"] {
+  border-color: var(--line);
+  background: var(--card);
+}
+
+/* Phones: the wordmark and all six languages fit on one line at 360px. */
+@media (max-width: 420px) {
+  .nav__in {
+    gap: 0.5rem;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+  }
+
+  .lang-switch {
+    gap: 2px;
+  }
+
+  .lang-btn {
+    min-width: 34px;
+    padding: 4px 5px;
+  }
+}
+
+/* Product pages keep their three links on phones too. */
+.nav__links--always {
+  display: flex;
+}
+
+@media (max-width: 420px) {
+  .nav__links--always a {
+    padding: 0.5rem 0.55rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav__links {
+    display: flex;
+  }
+
+  .lang-switch {
+    margin-inline-start: 0.5rem;
+  }
+
+  .nav__links + .nav__shop {
+    margin-inline-start: 0.5rem;
+  }
+}
+
+/* ── buttons ─────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: 500 1.0625rem/1.1 var(--font);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Gold is for the one thing to press on each screen. */
+.btn--primary {
+  background: var(--gold);
+  color: var(--gold-ink);
+  font-weight: 700;
+  box-shadow: 0 12px 26px -14px rgba(26, 20, 5, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.btn--primary:hover {
+  background: var(--gold-2);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px -14px rgba(26, 20, 5, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn--dark {
+  background: var(--card);
+  border-color: var(--line);
+  color: var(--text);
+  box-shadow: 0 12px 26px -16px rgba(16, 10, 58, 0.7);
+}
+
+.btn--dark:hover {
+  background: var(--card-2);
+  border-color: var(--line-2);
+  transform: translateY(-1px);
+}
+
+/* On a card, a dark button steps up one shade so it still reads. */
+.card .btn--dark {
+  background: var(--card-2);
+  border-color: var(--line-2);
+  box-shadow: none;
+}
+
+.card .btn--dark:hover {
+  background: #201c3e;
+  border-color: #3b3470;
+}
+
+.btn--sm {
+  min-height: 40px;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+}
+
+.btn__arrow {
+  transition: transform 0.25s var(--ease);
+}
+
+.btn:hover .btn__arrow {
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .btn__arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn:hover .btn__arrow {
+  transform: scaleX(-1) translateX(3px);
+}
+
+/* ── hero ────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 2.75rem var(--gutter) 3rem;
+  text-align: center;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__bg picture {
+  display: block;
+  height: 100%;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: drift 28s ease-in-out infinite alternate;
+  transform-origin: 70% 30%;
+}
+
+/* Fade the picture out at the bottom, so the hero melts into the page
+   colour behind it with no edge, and lay a veil of the page colour over it
+   so white words stay readable over any part of the picture. */
+.hero__bg {
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 55%, transparent 100%);
+}
+
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(90, 79, 192, 0.2) 0%, rgba(90, 79, 192, 0.45) 60%);
+}
+
+.hero__in {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.signs {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  color: var(--text);
+  user-select: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(201, 194, 255, 0.6);
+}
+
+.hero__title {
+  margin: 1rem auto 0.9rem;
+  max-width: 21ch;
+  font-size: clamp(2.15rem, 8vw, 4.1rem);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.hero__sub {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: clamp(1.08rem, 3.8vw, 1.3rem);
+  font-weight: 400;
+}
+
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 22rem;
+  margin: 1.75rem auto 0;
+}
+
+.hero__shot {
+  max-width: 46rem;
+  margin: 2.5rem auto 0;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: 0 30px 70px -30px rgba(16, 10, 58, 0.8);
+}
+
+.hero__shot img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.hero__ask {
+  display: flex;
+  justify-content: center;
+  min-height: 46px;
+  margin: 1.5rem 0 0;
+}
+
+/* page-menu.js draws a see-through button; here it is a near-black
+   secondary button like the others. Its panel takes the colour of the
+   page behind it from a script, hence the !important. */
+.hero__ask .pm {
+  border-color: var(--line);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 12px 26px -16px rgba(16, 10, 58, 0.7);
+}
+
+.hero__ask .pm-more {
+  border-inline-start-color: var(--line-2);
+}
+
+.hero__ask .pm-panel {
+  border-color: var(--line);
+  background: var(--card) !important;
+  color: var(--text);
+}
+
+@media (min-width: 560px) {
+  .hero__cta {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 5rem var(--gutter) 4rem;
+  }
+}
+
+/* Page heroes (/plumb, /quay): words on the left, picture on the right. */
+.phero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem var(--gutter) 1rem;
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.phero__title {
+  margin: 0.9rem 0 0.75rem;
+  font-size: clamp(2.6rem, 11vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.phero__sub {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--text);
+  font-size: clamp(1.1rem, 3.9vw, 1.3rem);
+  font-weight: 400;
+}
+
+.phero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.phero__art {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  aspect-ratio: 16 / 10;
+  background: var(--card);
+  box-shadow: var(--shadow-hi);
+}
+
+.phero__art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .phero {
+    grid-template-columns: 1.05fr 1fr;
+    padding-top: 4.5rem;
+  }
+}
+
+/* ── sections and cards ──────────────────────────────────────────────── */
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3rem var(--gutter);
+}
+
+.section__head {
+  max-width: 42rem;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+.section--start .section__head {
+  margin-inline: 0;
+  text-align: start;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section__title {
+  margin: 0;
+  font-size: clamp(1.65rem, 5.6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section__lead {
+  margin: 0.75rem 0 0;
+  color: var(--text);
+}
+
+/* On a card the quieter words are lavender. */
+.card .kicker,
+.card .section__lead {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section {
+    padding-block: 4.5rem;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s;
+}
+
+a.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow-hi);
+}
+
+a.card:focus-visible {
+  border-radius: var(--radius);
+}
+
+.card__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+a.card:hover .card__media img {
+  transform: scale(1.035);
+}
+
+.card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.2rem 1.3rem 1.35rem;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.card__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.card__rows {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.card__rows b {
+  margin-inline-end: 0.35rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.card__more {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.card--feature .card__title {
+  font-size: 1.6rem;
+}
+
+.grid--more {
+  margin-top: 1rem;
+}
+
+.panel__sub {
+  margin-top: 1.25rem;
+}
+
+/* The Luma button: the Luma script styles .luma-checkout--button, and
+   this keeps it in the page's own look. */
+.event__cta {
+  margin: 0;
+  align-self: center;
+}
+
+.event a.event__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--card-2);
+  color: var(--text);
+  font: 500 1.0625rem/1.1 var(--font);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.event a.event__btn:hover {
+  background: #201c3e;
+  border-color: #3b3470;
+}
+
+/* Links: a picture or a letter, the name, and the address. */
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.link__thumb {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: var(--card-2);
+}
+
+/* A letter on a small tile of the page purple: white on #5a4fc0 is 6.3:1. */
+.link__thumb--letter {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, var(--bg-2), var(--bg));
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.link__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.link__name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.link__url {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .link__url {
+  text-align: right;
+}
+
+/* The two shops: small square tiles under the links, secondary on
+   purpose: a small heading, no shadow, a smaller lavender label on the
+   card, and one short white line under each tile (white on the purple
+   is 5:1 or more). */
+.shops {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.shops__title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.shop-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 10.5rem));
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shop__note {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.shop-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 6.5rem;
+  aspect-ratio: 1 / 1;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.shop-tile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.shop-tile:hover {
+  border-color: var(--line-2);
+  color: var(--text);
+}
+
+/* About + contact panel. */
+.panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 1.35rem;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.panel .section__title + p,
+.panel .kicker + .section__title {
+  margin-top: 0.6rem;
+}
+
+.panel .card__title + p {
+  margin-top: 0.4rem;
+}
+
+.panel__lead {
+  font-size: clamp(1.2rem, 4.2vw, 1.5rem);
+  line-height: 1.35;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 760px) {
+  .panel {
+    grid-template-columns: 1.3fr 1fr;
+    padding: 2rem;
+  }
+}
+
+/* Plan table: rows of glass on phones, a real table from 700px. */
+.plans {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.plans caption {
+  padding: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  text-align: start;
+}
+
+.plans th,
+.plans td {
+  padding: 1rem 1.1rem;
+  text-align: start;
+  vertical-align: top;
+}
+
+.plans thead th {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.plans tbody th {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.plans td {
+  color: var(--muted);
+}
+
+.price {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.price small {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.plans tbody tr {
+  background: var(--card);
+}
+
+@media (max-width: 699px) {
+  .plans thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .plans,
+  .plans tbody,
+  .plans tr,
+  .plans th,
+  .plans td {
+    display: block;
+  }
+
+  .plans tbody tr {
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .plans caption {
+    display: block;
+  }
+
+  .plans tbody th {
+    padding-bottom: 0.25rem;
+  }
+
+  .plans td {
+    padding-top: 0.25rem;
+  }
+
+  .plans td.plans__price {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .plans tbody th,
+  .plans tbody td {
+    border-top: 1px solid var(--line);
+  }
+
+  .plans tbody tr:first-child th {
+    border-start-start-radius: var(--radius);
+  }
+
+  .plans tbody tr:first-child td:last-child {
+    border-start-end-radius: var(--radius);
+  }
+
+  .plans tbody tr:last-child th {
+    border-end-start-radius: var(--radius);
+  }
+
+  .plans tbody tr:last-child td:last-child {
+    border-end-end-radius: var(--radius);
+  }
+
+  .plans tbody tr:last-child th,
+  .plans tbody tr:last-child td {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .plans tbody th:first-child {
+    border-inline-start: 1px solid var(--line);
+  }
+
+  .plans tbody td:last-child {
+    border-inline-end: 1px solid var(--line);
+    text-align: end;
+  }
+}
+
+.note {
+  margin: 1rem 0 0;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+/* Who it is for, and delivery steps. */
+.ticks,
+.steps {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ticks li {
+  position: relative;
+  padding: 1rem 1.1rem 1rem 3rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.ticks li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 1.1rem;
+  top: 1.35rem;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+}
+
+[dir="rtl"] .ticks li {
+  padding: 1rem 3rem 1rem 1.1rem;
+}
+
+.steps {
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: rgba(201, 194, 255, 0.14);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.steps b {
+  display: block;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.steps span {
+  color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .ticks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* The store: one small, plain link under the plan table. Our page is
+   where the product lives; the store is only where you pay. */
+.store {
+  margin: 1rem 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.store a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-inline-start: 0.25rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.store a::after {
+  content: "\2197";
+  margin-inline-start: 0.4rem;
+  color: var(--muted);
+}
+
+.store a:hover {
+  background: var(--card-2);
+  border-color: var(--line-2);
+}
+
+/* What it is: the lead paragraphs, then four small facts. */
+.section__body {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.section__body .section__lead {
+  margin: 0;
+}
+
+@media (min-width: 960px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* FAQ: native details/summary, so it works with no script. */
+.faq {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 52px;
+  padding: 0.8rem 1.1rem;
+  font-weight: 500;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  flex: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.25s var(--ease);
+}
+
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq details p {
+  margin: 0;
+  padding: 0 1.1rem 1.1rem;
+  color: var(--muted);
+}
+
+.risk {
+  margin: 0;
+  max-width: 46rem;
+  color: var(--text);
+}
+
+/* ── footer ──────────────────────────────────────────────────────────── */
+.footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem var(--gutter) 3rem;
+  border-top: 1px solid var(--on-bg-line);
+  color: var(--text);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+}
+
+.footer a:hover {
+  text-decoration-color: var(--text);
+}
+
+.footer__nav a {
+  display: inline-block;
+  padding: 0.35rem 0.25rem;
+}
+
+.lic-badges {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.lic-badges > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin: 0.2rem 0.15rem;
+  padding: 0 0.6rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* ── language details ────────────────────────────────────────────────── */
+/* Chinese has no spaces between words; keep runs whole. */
+html[lang|="zh"] .hero__title,
+html[lang|="zh"] .section__title,
+html[lang|="zh"] .card__title {
+  word-break: keep-all;
+  line-break: strict;
+}
+
+/* Arabic letters join, and tracking pulls them apart. */
+html[lang|="ar"] .kicker,
+html[lang|="ar"] .hero__title,
+html[lang|="ar"] .section__title,
+html[lang|="ar"] .btn {
+  letter-spacing: 0;
+}
+
+/* ── motion ──────────────────────────────────────────────────────────── */
+@keyframes drift {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.5%, 1%, 0);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.8s var(--ease) both;
+}
+
+.rise--2 {
+  animation-delay: 0.08s;
+}
+
+.rise--3 {
+  animation-delay: 0.16s;
+}
+
+.rise--4 {
+  animation-delay: 0.24s;
+}
+
+/* Cards fade up as they scroll in. Only when the script has run (it adds
+   .js to <html>), so with no script nothing is ever hidden. */
+.js .reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), border-color 0.4s, box-shadow 0.4s;
+}
+
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.js a.card.reveal.is-in:hover {
+  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  a.card:hover,
+  .btn:hover,
+  .js a.card.reveal.is-in:hover {
+    transform: none;
+  }
+
+  a.card:hover .card__media img {
+    transform: none;
+  }
+}

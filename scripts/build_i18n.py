@@ -1273,6 +1273,13 @@ def apply_locale(html: str, locale: str, page: str, dest_rel: str) -> str:
             loc = key.replace("lang_current_", "")
             cur = ' aria-current="page"' if loc == locale else ""
             return f"<!--i18n:{key}-->{cur}<!--/i18n:{key}-->"
+        if key == "canonical_url":
+            path = lang_href(locale, page if page else "index.html")
+            return f"<!--i18n:canonical_url-->https://quay-35.elghaly.dev{path}<!--/i18n:canonical_url-->"
+        if key.startswith("hreflang_"):
+            loc = key.replace("hreflang_", "")
+            path = lang_href(loc, page if page else "index.html")
+            return f"<!--i18n:{key}-->https://quay-35.elghaly.dev{path}<!--/i18n:{key}-->"
         if key in STRINGS:
             text = STRINGS[key].get(locale, STRINGS[key]["en"])
             return f"<!--i18n:{key}-->{text}<!--/i18n:{key}-->"

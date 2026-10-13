@@ -61,11 +61,16 @@ a.lang-btn[aria-current="page"] {
   background: var(--card);
 }
 
-@media (max-width: 520px) {
+@media (max-width: 620px) {
   a.lang-btn {
     font-size: 10px;
     min-width: auto;
     padding: 4px 6px;
+    white-space: nowrap;
+  }
+
+  .nav__in {
+    row-gap: 0.35rem;
   }
 }
 

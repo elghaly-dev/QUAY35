@@ -437,7 +437,7 @@ a {
   height: 7px;
   border-radius: 50%;
   background: var(--gold);
-  box-shadow: 0 0 10px rgba(201, 194, 255, 0.6);
+  box-shadow: 0 0 10px rgba(245, 197, 66, 0.6);
 }
 
 .hero__title {
@@ -1142,7 +1142,7 @@ a.card:hover .card__media img {
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 50%;
-  background: rgba(201, 194, 255, 0.14);
+  background: rgba(245, 197, 66, 0.14);
   color: var(--gold);
   font-weight: 700;
 }

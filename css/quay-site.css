@@ -28,14 +28,21 @@
   line-height: 1;
 }
 
+.nav {
+  overflow: visible;
+}
+
 .nav__in {
   flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.5rem;
 }
 
 .nav__links--quay {
   display: flex;
   flex: 1 1 auto;
   min-width: 0;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 899px) {
@@ -61,16 +68,43 @@ a.lang-btn[aria-current="page"] {
   background: var(--card);
 }
 
-@media (max-width: 620px) {
-  a.lang-btn {
-    font-size: 10px;
-    min-width: auto;
-    padding: 4px 6px;
-    white-space: nowrap;
-  }
+.nav__in > .lang-switch {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--on-bg-line) transparent;
+  padding: 2px 0 4px;
+  box-sizing: border-box;
+}
 
-  .nav__in {
-    row-gap: 0.35rem;
+.nav__in > .lang-switch::-webkit-scrollbar {
+  height: 4px;
+}
+
+.nav__in > .lang-switch::-webkit-scrollbar-thumb {
+  background: var(--on-bg-line);
+  border-radius: 999px;
+}
+
+@media (min-width: 1280px) {
+  .nav__in > .lang-switch {
+    flex: 0 1 auto;
+    width: auto;
+    margin-inline-start: 0.5rem;
+    padding-bottom: 2px;
+  }
+}
+
+@media (max-width: 899px) {
+  .nav__in > .btn.btn--sm {
+    margin-inline-start: auto;
   }
 }
 
@@ -92,6 +126,20 @@ a.lang-btn[aria-current="page"] {
   gap: 2rem;
   align-items: center;
   padding: 2.5rem 0 1.5rem;
+}
+
+.quay-hero--solo {
+  grid-template-columns: 1fr;
+  padding-top: 2rem;
+}
+
+.quay-lockup {
+  margin: 0 0 0.85rem;
+  font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 @media (max-width: 820px) {

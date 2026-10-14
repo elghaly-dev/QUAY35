@@ -522,10 +522,10 @@
     "zh": "代您卖出的按钮即签名权限；一旦误触，损失由您承担，争议归我们扯皮。"
   },
   "hold_escrow_title": {
-    "en": "Telegram escrow",
-    "ar": "Telegram escrow",
-    "ru": "Telegram escrow",
-    "zh": "Telegram escrow"
+    "en": "Chat escrow",
+    "ar": "Chat escrow",
+    "ru": "Chat escrow",
+    "zh": "Chat escrow"
   },
   "hold_escrow_body": {
     "en": "Holding someone else's funds between two strangers makes us a custodian in a dispute we have no way to adjudicate.",
@@ -708,10 +708,10 @@
     "zh": "您收到文件、卡片或提醒"
   },
   "step3_body": {
-    "en": "By email or Telegram. Nothing of ours touches your config, your wallet or your transactions.",
-    "ar": "بالبريد أو Telegram. لا شيء من عندنا يلمس إعداداتك أو محفظتك أو معاملاتك.",
-    "ru": "По email или Telegram. Ничего наше не трогает ваш config, кошелёк или транзакции.",
-    "zh": "通过邮件或 Telegram。我们的东西不会碰您的配置、钱包或交易。"
+    "en": "By email. Nothing of ours touches your config, your wallet or your transactions.",
+    "ar": "بالبريد. لا شيء من عندنا يلمس إعداداتك أو محفظتك أو معاملاتك.",
+    "ru": "По email. Ничего наше не трогает ваш config, кошелёк или транзакции.",
+    "zh": "通过邮件。我们的东西不会碰您的配置、钱包或交易。"
   },
   "products_title": {
     "en": "Products",
@@ -840,10 +840,10 @@
     "zh": "Node Watch"
   },
   "watch_blurb": {
-    "en": "A Telegram ping when an RPC or gRPC feed goes quiet.",
-    "ar": "تنبيه Telegram عندما يصمت feed من RPC أو gRPC.",
-    "ru": "Ping в Telegram, когда RPC/gRPC feed замолкает.",
-    "zh": "RPC 或 gRPC feed 静默时 Telegram 提醒。"
+    "en": "An email ping when an RPC or gRPC feed goes quiet.",
+    "ar": "تنبيه بالبريد عندما يصمت feed من RPC أو gRPC.",
+    "ru": "Ping по email, когда RPC/gRPC feed замолкает.",
+    "zh": "RPC 或 gRPC feed 静默时邮件提醒。"
   },
   "watch_send": {
     "en": "Which feed to watch.",
@@ -852,10 +852,10 @@
     "zh": "要监控的 feed。"
   },
   "watch_get": {
-    "en": "Alerts in Telegram.",
-    "ar": "تنبيهات في Telegram.",
-    "ru": "Алерты в Telegram.",
-    "zh": "Telegram 提醒。"
+    "en": "Alerts by email.",
+    "ar": "تنبيهات بالبريد.",
+    "ru": "Алерты по email.",
+    "zh": "邮件提醒。"
   },
   "watch_when": {
     "en": "Once you have sent us the feed.",

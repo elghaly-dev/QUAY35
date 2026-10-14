@@ -115,7 +115,7 @@ a.lang-btn[aria-current="page"] {
 }
 
 .prose a:not(.btn):not(.lang-btn):not(.card) {
-  color: var(--gold);
+  color: var(--on-bg-soft);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -159,7 +159,7 @@ a.lang-btn[aria-current="page"] {
 
 .quay-hero__lede {
   margin: 0;
-  color: var(--muted);
+  color: var(--on-bg-soft);
   max-width: 38em;
   font-size: 1.0625rem;
 }

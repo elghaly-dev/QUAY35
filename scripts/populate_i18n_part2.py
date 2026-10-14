@@ -43,12 +43,12 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("watch_title", "Node Watch", "Node Watch", "Node Watch")
     add(
         "watch_blurb",
-        "تنبيه Telegram عندما يصمت feed من RPC أو gRPC.",
-        "Ping в Telegram, когда RPC/gRPC feed замолкает.",
-        "RPC 或 gRPC feed 静默时 Telegram 提醒。",
+        "تنبيه بالبريد عندما يصمت feed من RPC أو gRPC.",
+        "Ping по email, когда RPC/gRPC feed замолкает.",
+        "RPC 或 gRPC feed 静默时邮件提醒。",
     )
     add("watch_send", "أي feed نراقبه.", "Какой feed смотреть.", "要监控的 feed。")
-    add("watch_get", "تنبيهات في Telegram.", "Алерты в Telegram.", "Telegram 提醒。")
+    add("watch_get", "تنبيهات بالبريد.", "Алерты по email.", "邮件提醒。")
     add("watch_when", "بعد أن ترسل لنا الـ feed.", "После того как пришлёте feed.", "您发来 feed 之后。")
 
     add("score_title", "Score report", "Score report", "Score report")
@@ -407,7 +407,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
         "Кнопка «продать за вас» — signing authority; ошибся — спор наш, убыток ваш.",
         "代您卖出的按钮即签名权限；一旦误触，损失由您承担，争议归我们扯皮。",
     )
-    add("hold_escrow_title", "Telegram escrow", "Telegram escrow", "Telegram escrow")
+    add("hold_escrow_title", "Chat escrow", "Chat escrow", "Chat escrow")
     add(
         "hold_escrow_body",
         "ح holding أموال الغير بين غريبين يجعلنا أمينًا في نزاع لا نستطيع الفصل فيه.",

@@ -462,10 +462,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "About",
     },
     "footer_contact": {
-        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
-        "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
-        "ru": "elghaly, LLC · Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
-        "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
+        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
+        "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
+        "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
+        "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
     },
     "footer_contact_link": {
         "en": "Contact",
@@ -546,10 +546,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "在陌生人之间托管资金使我们成为无法裁决争议的保管人。",
     },
     "hold_escrow_title": {
-        "en": "Telegram escrow",
-        "ar": "Telegram escrow",
-        "ru": "Telegram escrow",
-        "zh": "Telegram escrow",
+        "en": "Chat escrow",
+        "ar": "Chat escrow",
+        "ru": "Chat escrow",
+        "zh": "Chat escrow",
     },
     "hold_footer_products": {
         "en": "All products",
@@ -761,6 +761,12 @@ STRINGS: dict[str, dict[str, str]] = {
         "ru": "QUAY — 35 ElGhaly",
         "zh": "QUAY — 35 ElGhaly",
     },
+    "order_btn": {
+        "en": "Order by email",
+        "ar": "اطلب بالبريد",
+        "ru": "Заказать по email",
+        "zh": "邮件下单",
+    },
     "paypal_btn": {
         "en": "Pay with PayPal",
         "ar": "الدفع عبر PayPal",
@@ -774,10 +780,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "PayPal 支付：Flex card pack，$29 一次性",
     },
     "paypal_land_aria": {
-        "en": "Pay with PayPal: QUAY Land, $149 / month",
-        "ar": "الدفع عبر PayPal: QUAY Land، 149$ / شهر",
-        "ru": "Оплата PayPal: QUAY Land, $149 / мес.",
-        "zh": "PayPal 支付：QUAY Land，$149/月",
+        "en": "Order by email: QUAY Land, $149 / month",
+        "ar": "اطلب بالبريد: QUAY Land، 149$ / شهر",
+        "ru": "Заказ по email: QUAY Land, $149 / мес.",
+        "zh": "邮件下单：QUAY Land，$149/月",
     },
     "paypal_score_aria": {
         "en": "Pay with PayPal: Score report, $49 one-time",
@@ -786,10 +792,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "PayPal 支付：Score report，$49 一次性",
     },
     "paypal_watch_aria": {
-        "en": "Pay with PayPal: Node Watch, $79 / month",
-        "ar": "الدفع عبر PayPal: Node Watch، 79$ / شهر",
-        "ru": "Оплата PayPal: Node Watch, $79 / мес.",
-        "zh": "PayPal 支付：Node Watch，$79/月",
+        "en": "Order by email: Node Watch, $79 / month",
+        "ar": "اطلب بالبريد: Node Watch، 79$ / شهر",
+        "ru": "Заказ по email: Node Watch, $79 / мес.",
+        "zh": "邮件下单：Node Watch，$79/月",
     },
     "price_month": {
         "en": "/ month",
@@ -972,10 +978,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "我们读取",
     },
     "step3_body": {
-        "en": "By email or Telegram. Nothing of ours touches your config, your wallet or your transactions.",
-        "ar": "بالبريد أو Telegram. لا شيء من عندنا يلمس إعداداتك أو محفظتك أو معاملاتك.",
-        "ru": "По email или Telegram. Ничего наше не трогает ваш config, кошелёк или транзакции.",
-        "zh": "通过邮件或 Telegram。我们的东西不会碰您的配置、钱包或交易。",
+        "en": "By email. Nothing of ours touches your config, your wallet or your transactions.",
+        "ar": "بالبريد. لا شيء من عندنا يلمس إعداداتك أو محفظتك أو معاملاتك.",
+        "ru": "По email. Ничего наше не трогает ваш config, кошелёк или транзакции.",
+        "zh": "通过邮件。我们的东西不会碰您的配置、钱包或交易。",
     },
     "step3_title": {
         "en": "You get a file, a card or a ping",
@@ -1128,16 +1134,16 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "用钱包支付",
     },
     "watch_blurb": {
-        "en": "A Telegram ping when an RPC or gRPC feed goes quiet.",
-        "ar": "تنبيه Telegram عندما يصمت feed من RPC أو gRPC.",
-        "ru": "Ping в Telegram, когда RPC/gRPC feed замолкает.",
-        "zh": "RPC 或 gRPC feed 静默时 Telegram 提醒。",
+        "en": "An email ping when an RPC or gRPC feed goes quiet.",
+        "ar": "تنبيه بالبريد عندما يصمت feed من RPC أو gRPC.",
+        "ru": "Ping по email, когда RPC/gRPC feed замолкает.",
+        "zh": "RPC 或 gRPC feed 静默时邮件提醒。",
     },
     "watch_get": {
-        "en": "Alerts in Telegram.",
-        "ar": "تنبيهات في Telegram.",
-        "ru": "Алерты в Telegram.",
-        "zh": "Telegram 提醒。",
+        "en": "Alerts by email.",
+        "ar": "تنبيهات بالبريد.",
+        "ru": "Алерты по email.",
+        "zh": "邮件提醒。",
     },
     "watch_send": {
         "en": "Which feed to watch.",

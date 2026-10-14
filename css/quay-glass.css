@@ -63,7 +63,9 @@
   --text: #ffffff;
   --muted: #b9b3e6;
   --gold: #c9c2ff;
+  /* Secondary copy and links on the purple field (--bg): ~4.9:1 vs --bg. */
   --gold-2: #e2deff;
+  --on-bg-soft: var(--gold-2);
   --gold-ink: #17123d;
   --pos: #7be3b0; /* mint: small positive numbers only, and sparingly */
   --on-bg-line: rgba(255, 255, 255, 0.2);

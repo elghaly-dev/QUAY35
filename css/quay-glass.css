@@ -164,12 +164,17 @@ a {
 
 .nav__in {
   max-width: var(--max);
-  min-height: 60px;
   margin: 0 auto;
-  padding: 0.5rem var(--gutter);
+  padding: 0;
+}
+
+.nav__top {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
+  min-height: 60px;
+  padding: 0.5rem var(--gutter);
 }
 
 .brand {
@@ -192,7 +197,10 @@ a {
 }
 
 .nav__links a {
-  padding: 0.5rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0.8rem;
   border-radius: 999px;
   color: var(--text);
   font-size: 0.95rem;
@@ -224,12 +232,12 @@ a {
 
 .lang-btn {
   flex: none;
-  min-width: 40px;
-  min-height: 36px;
-  padding: 4px 8px;
-  border: 1px solid transparent;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--on-bg-line);
   border-radius: 999px;
-  background: transparent;
+  background: rgba(13, 11, 31, 0.35);
   color: var(--text);
   font: 500 12px var(--font);
   cursor: pointer;
@@ -240,9 +248,9 @@ a {
   background: var(--card);
 }
 
-/* Phones: the wordmark and all six languages fit on one line at 360px. */
+/* Phones: keep 44px tap targets; tighten spacing only. */
 @media (max-width: 420px) {
-  .nav__in {
+  .nav__top {
     gap: 0.5rem;
   }
 
@@ -256,8 +264,8 @@ a {
   }
 
   .lang-btn {
-    min-width: 34px;
-    padding: 4px 5px;
+    padding: 0 8px;
+    font-size: 11px;
   }
 }
 
@@ -343,7 +351,7 @@ a {
 }
 
 .btn--sm {
-  min-height: 40px;
+  min-height: 44px;
   padding: 0 1rem;
   font-size: 0.95rem;
 }
@@ -1300,7 +1308,9 @@ a.card:hover .card__media img {
 }
 
 .footer__nav a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   padding: 0.35rem 0.25rem;
 }
 

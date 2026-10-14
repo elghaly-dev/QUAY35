@@ -719,7 +719,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "ru": "Сайт",
         "zh": "网站",
     },
-    "nav_chatting": {
+    "footer_chatting": {
         "en": "💬 Chatting",
         "ar": "💬 Chatting",
         "ru": "💬 Chatting",

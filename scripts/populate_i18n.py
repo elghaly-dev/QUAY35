@@ -33,14 +33,14 @@ add("meta_title", "QUAY — 35 ElGhaly", "QUAY — 35 ElGhaly", "QUAY — 35 ElG
 add(
     "meta_description",
     "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة للقراءة فقط، وتنبيهات مراقبة RPC.",
-    "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, read-only оценка mint и RPC-watch.",
+    "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, оценка mint с доступом на просмотр и RPC-watch.",
     "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、只读 mint 评分与 RPC 监控提醒。",
 )
 add("og_title", "QUAY — 35 ElGhaly", "QUAY — 35 ElGhaly", "QUAY — 35 ElGhaly")
 add(
     "og_description",
     "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية، بطاقات إثبات، تقييم mint للقراءة فقط، وتنبيهات RPC.",
-    "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, read-only mint и RPC-watch.",
+    "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch.",
     "Solana 机器人桌面报告：周报、证明卡片、只读 mint 评分与 RPC 提醒。",
 )
 add(

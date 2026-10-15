@@ -258,7 +258,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "读取您的公开交易签名，将当前优先费/小费设置与交易实际支付及上链情况对比。",
     },
     "fees_lede2": {
-        "en": "You receive one written page within 48 hours of a complete brief. This is a recommendation only — we do not change your config, your wallet, or your transactions.",
+        "en": "You receive one written page within 48 hours of a complete brief. This is a recommendation, nothing more: we do not change your config, your wallet, or your transactions.",
         "ar": "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية فقط — لا نغيّر config أو محفظتك أو معاملاتك.",
         "ru": "Одна страница за 48 ч после полного brief. Только рекомендация — не трогаем config, кошелёк, транзакции.",
         "zh": "完整 brief 后 48 小时内交付一页书面报告。仅为建议——不改动配置、钱包或交易。",
@@ -282,9 +282,9 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "PayPal：费用审查，$199 一次性",
     },
     "fees_price_note": {
-        "en": "Once · English only · PayPal or invoice on reply",
-        "ar": "مرة واحدة · English only · PayPal أو فاتورة في الرد",
-        "ru": "Разово · English only · PayPal или invoice в ответе",
+        "en": "Once · In English · PayPal or invoice on reply",
+        "ar": "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد",
+        "ru": "Разово · на английском · PayPal или invoice в ответе",
         "zh": "一次性 · 仅英文 · PayPal 或回复发票",
     },
     "fees_price_p": {
@@ -372,7 +372,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "均为公开数据。请勿发送链上或浏览器中不可见的内容。",
     },
     "fees_send_li1": {
-        "en": "signatures only. Never a private key, never a seed phrase, never an RPC URL with a token in it.",
+        "en": "Just signatures. Never a private key, never a seed phrase, never an RPC URL with a token in it.",
         "ar": "توقيعات فقط. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
         "ru": "Только подписи. Никогда private key, seed или RPC с token.",
         "zh": "仅签名。不要私钥、助记词或带 token 的 RPC。",
@@ -462,7 +462,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "About",
     },
     "footer_contact": {
-        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
+        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
         "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
         "ru": "elghaly, LLC · Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
         "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
@@ -534,10 +534,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "自动跟单需要您的密钥或我们控制的钱包——两者我们都不持有。",
     },
     "hold_copy_title": {
-        "en": "Copy-trading",
-        "ar": "Copy-trading",
-        "ru": "Copy-trading",
-        "zh": "Copy-trading",
+        "en": "Copy-mirroring",
+        "ar": "Copy-mirroring",
+        "ru": "Copy-mirroring",
+        "zh": "Copy-mirroring",
     },
     "hold_escrow_body": {
         "en": "Holding someone else's funds between two strangers makes us a custodian in a dispute we have no way to adjudicate.",
@@ -702,9 +702,9 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "Open source",
     },
     "meta_description": {
-        "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a read-only mint score and RPC watch pings.",
+        "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
         "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة للقراءة فقط، وتنبيهات مراقبة RPC.",
-        "ru": "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, read-only оценка mint и RPC-watch.",
+        "ru": "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, оценка mint с доступом на просмотр и RPC-watch.",
         "zh": "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、只读 mint 评分与 RPC 监控提醒。",
     },
     "meta_title": {
@@ -744,9 +744,9 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "产品",
     },
     "og_description": {
-        "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a read-only mint score and RPC watch pings.",
+        "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
         "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية، بطاقات إثبات، تقييم mint للقراءة فقط، وتنبيهات RPC.",
-        "ru": "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, read-only mint и RPC-watch.",
+        "ru": "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch.",
         "zh": "Solana 机器人桌面报告：周报、证明卡片、只读 mint 评分与 RPC 提醒。",
     },
     "og_image_alt": {
@@ -894,9 +894,9 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "退款与我们在哪",
     },
     "score_blurb": {
-        "en": "A read-only note on one mint. Not a sell bot, not advice.",
+        "en": "A view-access note on one mint. Not a sell bot, not advice.",
         "ar": "ملاحظة للقراءة فقط على mint واحد. ليس bot بيع ولا نصيحة.",
-        "ru": "Read-only заметка по одному mint. Не sell-бот и не совет.",
+        "ru": "Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.",
         "zh": "单个 mint 只读说明。非卖出机器人，非投资建议。",
     },
     "score_get": {
@@ -1164,7 +1164,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "您发来 feed 之后。",
     },
     "where_contact": {
-        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
+        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
         "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
         "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки только по записи.",
         "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",

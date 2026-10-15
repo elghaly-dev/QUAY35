@@ -55,7 +55,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add(
         "score_blurb",
         "ملاحظة للقراءة فقط على mint واحد. ليس bot بيع ولا نصيحة.",
-        "Read-only заметка по одному mint. Не sell-бот и не совет.",
+        "Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.",
         "单个 mint 只读说明。非卖出机器人，非投资建议。",
     )
     add("score_send", "عنوان الـ mint.", "Адрес mint.", "mint 地址。")
@@ -349,7 +349,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("fees_sample_overpay", "دفع زائد", "Переплата", "多付")
     add("fees_sample_unknown", "تعذّر التحديد (UNKNOWN)", "Could not determine (UNKNOWN)", "无法确定 (UNKNOWN)")
     add("fees_price_title", "السعر والاستلام", "Цена и intake", "价格与提交")
-    add("fees_price_note", "مرة واحدة · English only · PayPal أو فاتورة في الرد", "Разово · English only · PayPal или invoice в ответе", "一次性 · 仅英文 · PayPal 或回复发票")
+    add("fees_price_note", "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد", "Разово · на английском · PayPal или invoice в ответе", "一次性 · 仅英文 · PayPal 或回复发票")
     add(
         "fees_price_p",
         "ادفع PayPal هنا وأرسل brief مع PayPal transaction ID، أو أرسل brief أولًا وادفع على الفاتورة عند التأكيد. لا نموذج على هذه الصفحة.",
@@ -393,7 +393,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
         "Спрашивают часто. Почему нет и что должно измениться.",
         "常被问起。说明为何拒绝，以及需要什么条件才会变。",
     )
-    add("hold_copy_title", "Copy-trading", "Copy-trading", "Copy-trading")
+    add("hold_copy_title", "Copy-mirroring", "Copy-mirroring", "Copy-mirroring")
     add(
         "hold_copy_body",
         "نسخ الصفقات تلقائيًا يحتاج مفاتيحك أو محفظة نتحكم بها، ولن نحتفظ بأيّ منهما.",

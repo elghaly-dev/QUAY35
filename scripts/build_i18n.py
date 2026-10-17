@@ -462,7 +462,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "About",
     },
     "footer_contact": {
-        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
         "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
         "ru": "elghaly, LLC · Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
         "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
@@ -1164,7 +1164,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "您发来 feed 之后。",
     },
     "where_contact": {
-        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
         "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
         "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки только по записи.",
         "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",

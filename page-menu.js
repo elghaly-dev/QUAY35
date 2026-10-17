@@ -1,7 +1,7 @@
 /* page-menu.js — the "Ask ChatGPT | ⌄" button at the top of a content page.
  *
  * One split button: the main half opens this page in ChatGPT; the ⌄ half
- * opens a menu with Ask Cursor and Copy page. QUAY shows Chatting beside
+ * opens a menu with Copy page. QUAY shows Chatting beside
  * elghaly beside it. Plain JS. No tracking, no
  * cookies, no network calls: the Markdown is built from the page in this tab,
  * so it is always the page as it is now.
@@ -454,44 +454,40 @@
   var PM_L10N = {
     en: {
       askChatgpt: "Ask ChatGPT",
-      askCursor: "Ask Cursor",
       copyPage: "Copy page",
       copySub: "Markdown for AI tools",
       groupAria: "Ask AI about this page",
-      moreAria: "More AI options: Ask Cursor, copy page",
+      moreAria: "More options: copy page",
       copied: "Copied ✓",
       copyFailed: "Copy failed",
       copiedLive: "Page copied as Markdown"
     },
     ar: {
       askChatgpt: "Ask ChatGPT",
-      askCursor: "Ask Cursor",
       copyPage: "Copy page",
       copySub: "Markdown for AI tools",
       groupAria: "Ask AI about this page",
-      moreAria: "More AI options: Ask Cursor, copy page",
+      moreAria: "More options: copy page",
       copied: "Copied ✓",
       copyFailed: "Copy failed",
       copiedLive: "Page copied as Markdown"
     },
     ru: {
       askChatgpt: "Ask ChatGPT",
-      askCursor: "Ask Cursor",
       copyPage: "Copy page",
       copySub: "Markdown for AI tools",
       groupAria: "Ask AI about this page",
-      moreAria: "More AI options: Ask Cursor, copy page",
+      moreAria: "More options: copy page",
       copied: "Copied ✓",
       copyFailed: "Copy failed",
       copiedLive: "Page copied as Markdown"
     },
     zh: {
       askChatgpt: "Ask ChatGPT",
-      askCursor: "Ask Cursor",
       copyPage: "Copy page",
       copySub: "Markdown for AI tools",
       groupAria: "Ask AI about this page",
-      moreAria: "More AI options: Ask Cursor, copy page",
+      moreAria: "More options: copy page",
       copied: "Copied ✓",
       copyFailed: "Copy failed",
       copiedLive: "Page copied as Markdown"
@@ -510,7 +506,6 @@
     w.box.setAttribute("aria-label", s.groupAria);
     w.summary.setAttribute("aria-label", s.moreAria);
     w.mainLabel.textContent = s.askChatgpt;
-    w.cursorLabel.textContent = s.askCursor + " ↗";
     w.copyLabel.textContent = s.copyPage;
     w.copySub.textContent = s.copySub;
   }
@@ -558,16 +553,6 @@
     live.className = "pm-sr";
     live.setAttribute("aria-live", "polite");
 
-    var cursorLink = document.createElement("a");
-    cursorLink.href = "https://cursor.com/link/prompt?text=" + q;
-    cursorLink.target = "_blank";
-    cursorLink.rel = "noopener noreferrer";
-    var cursorLabel = document.createElement("span");
-    cursorLabel.setAttribute("data-pm-label", "askCursor");
-    cursorLabel.textContent = s.askCursor + " ↗";
-    cursorLink.appendChild(cursorLabel);
-    panel.appendChild(cursorLink);
-
     var copyBtn = document.createElement("button");
     copyBtn.type = "button";
     copyBtn.setAttribute("data-pm", "copy");
@@ -595,7 +580,6 @@
       box: box,
       summary: summary,
       mainLabel: mainLabel,
-      cursorLabel: cursorLabel,
       copyLabel: copyLabel,
       copySub: copySub,
       copyBtn: copyBtn,

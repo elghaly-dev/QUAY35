@@ -21,7 +21,7 @@ FOOTER_URLS = [
 
 FOOTER_BLOCK = re.compile(r"<footer\b[^>]*>(.*?)</footer>", re.I | re.S)
 
-FORBIDDEN_WORDS = re.compile(r"\b(live|profit|guarantee|audit|launched|only|trading)\b", re.I)
+FORBIDDEN_WORDS = re.compile(r"\b(live|profit|guarantee|audit|launched)\b", re.I)  # exactly five; "only", "read-only" and "trading" are allowed
 FORBIDDEN = [
     (re.compile(r"qq\.com", re.I), "qq.com"),
     (re.compile(r"telegram", re.I), "Telegram"),

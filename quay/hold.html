@@ -1,98 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>What QUAY will not build — QUAY · 35 ElGhaly</title>
 <meta name="description" content="Three products QUAY refuses to build, and why."/>
-<meta name="theme-color" content="#07090b"/>
+<meta name="theme-color" content="#5a4fc0"/>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-<style>
-:root{--bg:#07090b;--ink:#e8fbf6;--muted:#9ab3ad;--accent:#2ee6c7;--surface:#0f1418;--line:rgba(46,230,199,.22);--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",ui-sans-serif,system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
-.wrap{max-width:1080px;margin:0 auto;padding:0 16px 88px}
-a{color:var(--accent);text-decoration:none}
-/* Links inside running text are underlined, as on elghaly.dev: by colour
-   alone they were too close to the words around them (axe link-in-text-block). */
-p a:not(.btn),li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;text-decoration-color:color-mix(in srgb,currentColor 55%,transparent)}
-p a:not(.btn):hover,li a:not(.btn):hover,p a:not(.btn):focus-visible,li a:not(.btn):focus-visible{text-decoration-color:currentColor}
-header{display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:50;margin:0 -16px 12px;padding:10px 16px;background:rgba(7,9,11,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
-.qmark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font:700 16px var(--sans);color:#04110a;background:var(--accent)}
-.mark-35{font-size:24px;font-weight:700;color:var(--ink)}
-.mark-quay{font-size:15px;letter-spacing:.22em;font-weight:700;color:var(--accent)}
-.header-right{margin-left:auto;display:flex;align-items:center;gap:6px}
-.back{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
-.back:hover{color:var(--ink);border-color:var(--accent)}
-.btn{display:inline-block;padding:8px 12px;border-radius:999px;font-size:12px;border:1px solid var(--line);color:var(--ink);background:transparent;text-decoration:none;white-space:nowrap}
-.btn:hover{border-color:var(--accent)}
-.hero{padding:28px 0 8px}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-h1{font-family:var(--serif);font-size:clamp(30px,5.8vw,48px);font-weight:400;line-height:1.1;margin-bottom:14px}
-.lede{color:var(--muted);font-size:15px;max-width:62ch}
-.section{margin-top:36px}
-.refusals{display:grid;grid-template-columns:1fr;gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
-.card h2{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 10px;color:var(--ink)}
-.card p{font-size:14px;color:var(--muted)}
-.closing{margin-top:36px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(46,230,199,.04)}
-.closing p{font-size:15px;color:var(--ink);max-width:62ch;line-height:1.6}
-footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-footer p{margin:6px 0}
-</style>
-<style id="lic-badges-css">.lic-badges{margin:.75rem 0 0;font-size:.75rem;line-height:1.2}.lic-badges>a,.lic-badges>span{display:inline-flex;align-items:center;min-height:24px;margin:.2rem .15rem;padding:0 .6rem;border:1px solid currentColor;border-radius:999px;color:inherit;vertical-align:middle}.lic-badges>a{text-decoration:underline;text-underline-offset:2px}.lic-badges>span{text-decoration:none}</style>
+<link rel="stylesheet" href="../css/quay-glass.css"/>
+<link rel="stylesheet" href="../css/quay-site.css"/>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <a class="brand" href="../index.html">
-    <span class="qmark">Q</span>
-    <span class="mark-35">35</span>
-    <span class="mark-quay">QUAY</span>
-  </a>
-  <div class="header-right">
-    <a class="btn" href="https://chatting.elghaly.dev">💬 Chatting by elghaly</a>
-    <a class="back" href="../index.html">All products</a>
+<a class="skip" href="#main">Skip to main content</a>
+<nav class="nav" aria-label="Site">
+  <div class="nav__in">
+    <div class="nav__top">
+      <a class="brand brand--quay" href="/">QUAY</a>
+      <span class="badge-35" aria-label="35"><span class="badge-35__dot" aria-hidden="true">●</span> 35</span>
+      <div class="nav__links nav__links--quay nav__links--always">
+        <a href="/#products">Products</a>
+        <a href="/quay/fees.html">Fee review</a>
+        <a href="/quay/hold.html" aria-current="page">Hold</a>
+      </div>
+      <span class="nav__spacer" aria-hidden="true"></span>
+      <div class="lang-switch" aria-label="Language">
+        <a class="lang-btn" href="/quay/hold.html" hreflang="en" aria-current="page">English</a>
+        <a class="lang-btn" href="/ar/quay/hold.html" hreflang="ar">العربية</a>
+        <a class="lang-btn" href="/ru/quay/hold.html" hreflang="ru">Русский</a>
+        <a class="lang-btn" href="/zh/quay/hold.html" hreflang="zh-Hans">中文</a>
+      </div>
+    </div>
   </div>
-</header>
-
-<section class="hero">
-  <p class="eyebrow">QUAY · Hold</p>
+</nav>
+<div class="page prose">
+<main id="main">
+<section class="sub-hero">
+  <div class="page-menu" data-page-menu style="display:flex;justify-content:flex-end;min-height:46px;margin:0 0 .5rem"></div>
+  <p class="kicker">QUAY · Hold</p>
   <h1>What QUAY will not build.</h1>
-  <p class="lede">These come up often. Here is why the answer is no, and what would have to change.</p>
+  <p class="quay-hero__lede">These come up often. Here is why the answer is no, and what would have to change.</p>
 </section>
 
 <section class="section">
-  <div class="refusals">
+  <div class="product-grid" style="grid-template-columns:1fr">
     <article class="card">
-      <h2>Copy-trading</h2>
-      <p>Copying trades automatically needs either your keys or a wallet we control, and we will not hold either.</p>
+      <div class="card__body">
+        <h2 class="card__title">Copy-mirroring</h2>
+        <p>Copying trades automatically needs either your keys or a wallet we control, and we will not hold either.</p>
+      </div>
     </article>
     <article class="card">
-      <h2>Auto-panic sell</h2>
-      <p>A button that sells for you is signing authority, and the day it fires wrongly the loss is ours to argue about and yours to carry.</p>
+      <div class="card__body">
+        <h2 class="card__title">Auto-panic sell</h2>
+        <p>A button that sells for you is signing authority, and the day it fires wrongly the loss is ours to argue about and yours to carry.</p>
+      </div>
     </article>
     <article class="card">
-      <h2>Telegram escrow</h2>
-      <p>Holding someone else's funds between two strangers makes us a custodian in a dispute we have no way to adjudicate.</p>
+      <div class="card__body">
+        <h2 class="card__title">Chat escrow</h2>
+        <p>Holding someone else's funds between two strangers makes us a custodian in a dispute we have no way to adjudicate.</p>
+      </div>
     </article>
   </div>
 </section>
 
-<section class="closing">
-  <p>These stay on hold until QUAY Land has three paying operators. Not because the risk changes — it does not — but because we will not learn custody on someone else's money.</p>
+<section class="card panel">
+  <div class="card__body">
+    <p>These stay on hold until QUAY Land has three paying operators. Not because the risk changes — it does not — but because we will not learn custody on someone else's money.</p>
+  </div>
 </section>
-
-<footer>
-  <p><a href="../index.html">All products</a> · <a href="fees.html">Fee review</a></p>
+</main>
+<footer class="footer">
+  <p><a href="/">All products</a> · <a href="/quay/fees.html">Fee review</a></p>
   <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>
-  <p><a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="/#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
-<p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a></p>
+  <p class="footer__nav"><a href="https://chatting.elghaly.dev">💬 Chatting</a> · <a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="/#refunds">Refunds</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a></p>
 </footer>
 </div>
+<script src="../page-menu.js" defer></script>
 </body>
 </html>

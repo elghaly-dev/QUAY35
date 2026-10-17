@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>QUAY — 35 ElGhaly</title>
+<meta name="description" content="Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, оценка mint с доступом на просмотр и RPC-watch."/>
+<meta name="theme-color" content="#5a4fc0"/>
+<link rel="canonical" href="https://quay-35.elghaly.dev/ru/"/>
+<link rel="alternate" hreflang="en" href="https://quay-35.elghaly.dev/"/>
+<link rel="alternate" hreflang="ar" href="https://quay-35.elghaly.dev/ar/"/>
+<link rel="alternate" hreflang="ru" href="https://quay-35.elghaly.dev/ru/"/>
+<link rel="alternate" hreflang="zh-Hans" href="https://quay-35.elghaly.dev/zh/"/>
+<link rel="alternate" hreflang="x-default" href="https://quay-35.elghaly.dev/"/>
+<link rel="icon" href="../favicon.ico" sizes="any"/>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+<link rel="stylesheet" href="../css/quay-glass.css"/>
+<link rel="stylesheet" href="../css/quay-site.css"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="QUAY"/>
+<meta property="og:url" content="https://quay-35.elghaly.dev/"/>
+<meta property="og:title" content="QUAY — 35 ElGhaly"/>
+<meta property="og:description" content="Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch."/>
+<meta property="og:image" content="https://quay-35.elghaly.dev/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="QUAY — отчёты для деска по ботам Solana"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="QUAY — 35 ElGhaly"/>
+<meta name="twitter:description" content="Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch."/>
+<meta name="twitter:image" content="https://quay-35.elghaly.dev/og.png"/>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к основному содержанию</a>
+<nav class="nav" aria-label="Сайт">
+  <div class="nav__in">
+    <div class="nav__top">
+      <a class="brand brand--quay" href="/ru/">QUAY</a>
+      <span class="badge-35" aria-label="35"><span class="badge-35__dot" aria-hidden="true">●</span> 35</span>
+      <div class="nav__links nav__links--quay">
+        <a class="nav__hide-sm" href="/ru/#products">Продукты</a>
+        <a href="/ru/quay/fees.html">Разбор комиссий</a>
+        <a class="nav__hide-sm" href="/ru/quay/hold.html">Отложено</a>
+      </div>
+      <span class="nav__spacer" aria-hidden="true"></span>
+      <div class="lang-switch" aria-label="Язык">
+        <a class="lang-btn" href="/" hreflang="en">English</a>
+        <a class="lang-btn" href="/ar/" hreflang="ar">العربية</a>
+        <a class="lang-btn" href="/ru/" hreflang="ru" aria-current="page">Русский</a>
+        <a class="lang-btn" href="/zh/" hreflang="zh-Hans">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="page">
+<main id="main">
+<section class="quay-hero quay-hero--solo">
+  <div class="quay-hero__copy">
+    <p class="quay-lockup">35 · QUAY · ElGhaly</p>
+    <div class="page-menu" data-page-menu style="display:flex;justify-content:flex-end;min-height:46px;margin:0 0 .5rem"></div>
+    <h1 class="quay-hero__title">Отчёты, которые деск может продавать. Не ещё один пустой график.</h1>
+    <p class="quay-hero__lede">QUAY работает с публичными данными и текстом, который вы присылаете — подписи, mint, feed — и возвращает страницу, карту или ping. Вы покупаете файл, карту или watch, не токен. Мы никогда не храним ключи.</p>
+    <div class="quay-hero__cta">
+      <a class="btn btn--primary" href="#products">Смотреть пять продуктов</a>
+      <a class="btn btn--dark" href="/ru/quay/fees.html">Начать с разбора комиссий за $199</a>
+    </div>
+  </div>
+</section>
+<ul class="trust">
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>Только публичные данные</b>Никаких ключей, seed-фраз и доступа к кошельку. Никогда.</span></li>
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>Возврат в любой момент</b>Без формы, без причины, без срока. <a href="#refunds">Как</a></span></li>
+  <li><span class="tick" aria-hidden="true">✓</span><span><b>Настоящая компания</b>elghaly, LLC. <a href="#where">Где мы</a></span></li>
+</ul>
+
+<section id="how" class="section section--start" aria-labelledby="how-h">
+  <div class="section__head"><h2 id="how-h" class="section__title">Как это работает</h2><p class="section__lead">Всё, что мы читаем, уже публично в блокчейне или в explorer.</p></div>
+  <ol class="steps">
+    <li><span><b>Вы присылаете публичные данные</b>Подписи, mint, feed для watch или текст для карт. Никогда ключ или RPC с token.</span></li>
+    <li><span><b>Мы читаем</b>Сверяем с тем, что реально landed в chain. Если из публичных данных не прочитать — пишем UNKNOWN, не угадываем.</span></li>
+    <li><span><b>Вы получаете файл, карту или ping</b>По email. Ничего наше не трогает ваш config, кошелёк или транзакции.</span></li>
+  </ol>
+</section>
+
+<section id="products" class="section" aria-labelledby="products-h">
+  <div class="section__head"><h2 id="products-h" class="section__title">Продукты</h2><p class="section__lead">Оплата PayPal здесь, через shop checkout или кошельком ниже.</p></div>
+  <div class="product-grid">
+    <article class="card product-card product-card--feature">
+      <div class="card__body">
+        <span class="product-badge">Начните здесь</span>
+        <h3 class="card__title">Разбор комиссий</h3>
+        <p class="card__text">Ваши priority fee и tip сверяются с тем, что публичные транзакции реально платили и где landed.</p>
+        <dl class="spec"><dt>Вы присылаете</dt><dd>До 200 подписей транзакций и текущие настройки. Ничего приватного.</dd><dt>Вы получаете</dt><dd>Одна страница: percentile landed, цель, где переплата. Пробелы — UNKNOWN.</dd><dt>Срок</dt><dd>В течение 48 часов после полного brief.</dd></dl>
+        <div class="buy"><div class="price">$199 <small>разово</small></div><a class="btn btn--primary btn--sm" href="/ru/quay/fees.html">Детали и brief</a></div>
+      </div>
+    </article>
+    <article class="card product-card">
+      <div class="card__body">
+        <h3 class="card__title">QUAY Land</h3>
+        <p class="card__text">Еженедельный отчёт для одного бота: landed vs failed и где теряются tips.</p>
+        <dl class="spec"><dt>Вы присылаете</dt><dd>Хеши транзакций. Кошелёк остаётся у вас.</dd><dt>Вы получаете</dt><dd>Письменный отчёт каждую неделю по email.</dd><dt>Срок</dt><dd>Подтверждаем в ответ на заказ.</dd></dl>
+        <div class="buy"><div class="price">$149 <small> / мес.</small></div><a class="btn btn--primary btn--sm" href="mailto:support@elghaly.dev?subject=Order%3A%20QUAY%20Land" data-product="quay-land" aria-label="Заказ по email: QUAY Land, $149 / мес.">Заказать по email</a><a class="alt" href="https://quay-shop.elghaly.dev/products/quay-land">или через shop checkout</a></div>
+      </div>
+    </article>
+    <article class="card product-card">
+      <div class="card__body">
+        <h3 class="card__title">Node Watch</h3>
+        <p class="card__text">Ping по email, когда RPC/gRPC feed замолкает.</p>
+        <dl class="spec"><dt>Вы присылаете</dt><dd>Какой feed смотреть.</dd><dt>Вы получаете</dt><dd>Алерты по email.</dd><dt>Срок</dt><dd>После того как пришлёте feed.</dd></dl>
+        <div class="buy"><div class="price">$79 <small> / мес.</small></div><a class="btn btn--primary btn--sm" href="mailto:support@elghaly.dev?subject=Order%3A%20Node%20Watch" data-product="node-watch" aria-label="Заказ по email: Node Watch, $79 / мес.">Заказать по email</a><a class="alt" href="https://quay-shop.elghaly.dev/products/node-watch">или через shop checkout</a></div>
+      </div>
+    </article>
+    <article class="card product-card">
+      <div class="card__body">
+        <h3 class="card__title">Score report</h3>
+        <p class="card__text">Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.</p>
+        <dl class="spec"><dt>Вы присылаете</dt><dd>Адрес mint.</dd><dt>Вы получаете</dt><dd>Письменная заметка по email.</dd><dt>Срок</dt><dd>Подтверждаем в ответ на заказ.</dd></dl>
+        <div class="buy"><div class="price">$49 <small>разово</small></div><a class="btn btn--primary btn--sm" href="https://www.paypal.com/ncp/payment/TA9ZAXCAGNUYY" data-product="score-report" aria-label="Оплата PayPal: Score report, $49 разово">Оплатить через PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/score-report">или через shop checkout</a></div>
+      </div>
+    </article>
+    <article class="card product-card">
+      <div class="card__body">
+        <h3 class="card__title">Flex card pack</h3>
+        <p class="card__text">Proof-карты в lockup 35 из вашего текста. Без выдуманных цифр.</p>
+        <dl class="spec"><dt>Вы присылаете</dt><dd>Текст для карт.</dd><dt>Вы получаете</dt><dd>Картинки-карты по email.</dd><dt>Срок</dt><dd>Подтверждаем в ответ на заказ.</dd></dl>
+        <div class="buy"><div class="price">$29 <small>разово</small></div><a class="btn btn--primary btn--sm" href="https://www.paypal.com/ncp/payment/DDNVRBHA4952N" data-product="flex-card-pack" aria-label="Оплата PayPal: Flex card pack, $29 разово">Оплатить через PayPal</a><a class="alt" href="https://quay-shop.elghaly.dev/products/flex-card-pack">или через shop checkout</a></div>
+      </div>
+    </article>
+    <article class="card product-card product-card--ask">
+      <div class="card__body">
+        <h3 class="card__title">Не уверены, что выбрать?</h3>
+        <p class="card__text">Напишите на <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>, что вы запускаете. Ответим минимальным продуктом — или честно скажем, что ни один не подходит.</p>
+        <div class="buy"><a class="btn btn--dark btn--sm" href="mailto:support@elghaly.dev?subject=QUAY%20%E2%80%94%20which%20product%3F">Сначала спросить</a></div>
+      </div>
+    </article>
+  </div>
+  <p class="recourse">PayPal здесь или в shop можно оспорить в PayPal; карта в shop — через банк. Кошелёк — нет. Тот же продукт, разный recourse.</p>
+</section>
+
+<section class="section" aria-label="Возвраты и где мы">
+  <div class="two-col">
+    <div class="card panel" id="refunds">
+      <div class="card__body">
+        <h2 class="section__title">Возвраты</h2>
+        <p class="panel-note">Хотите деньги назад — получите.</p>
+        <p>Без формы, причины, срока и исключений. Напишите на <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> о возврате.</p>
+        <p>На всё QUAY — fee review, Land, карты, Node Watch. До старта или после дelivery.</p>
+        <p><strong>Оплата PayPal здесь или через shop checkout</strong> — На ту же карту или PayPal, 5–10 раб. дней. Можно оспорить в PayPal.</p>
+        <p><strong>Кошелёк</strong> — На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Только адрес под вашим контролем; deposit биржи — нет.</p>
+        <p>Лучше вернуть деньги, чем держать то, что клиент не хочет нам оставлять.</p>
+      </div>
+    </div>
+    <div class="card panel" id="where">
+      <div class="card__body">
+        <h2 class="section__title">Где мы</h2>
+        <p><strong>elghaly, LLC</strong> · Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки только по записи.</p>
+        <p>QUAY — удалённый desk. Поддержка email, созвон по вашему TZ. Нет офиса — проверяйте то, что можете сами:</p>
+        <ul class="where-list">
+          <li>Четыре адреса кошелька ниже ведут в explorer. Откройте историю до отправки — проверка без нас.</li>
+          <li>Возврат без условий. Попросили — вернули. Дешёвая проверка, держим ли слово.</li>
+          <li><!--i18n:where_li3-->Start small. <a href="/ru/quay/fees.html">$199 — письменный fee review</a> без ключей, кошелька и доступа. Дешевле — Flex card pack за $29.</li>
+        </ul>
+        <p>Маленькая удалённая команда, не крупный поставщик с legal. Если важно для покупки — спросите до оплаты, скажем честно, что можем и не можем.</p>
+      </div>
+    </div>
+  </div>
+
+  <details class="wallets" id="wallets">
+    <summary><span><span class="kicker" style="display:block;margin:0 0 4px">Оплата кошельком</span><h2 class="section__title" style="margin:0">Платите кошельком</h2></span></summary>
+    <div class="wallet-body">
+      <p>Те же цены, что в shop. Отправьте сумму продукта, затем hash на <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>.</p>
+      <p class="network-warn">Перевод кошельком необратим. Chargeback нет. Прочитайте, что покупаете, до отправки.</p>
+      <p class="network-warn">ETH и Base — один формат адреса. Неверная сеть = потеря средств без возврата.</p>
+      <div class="chains">
+        <div class="chain"><b>SOL · Solana</b><div class="addr-line">4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo</div><div class="row"><button class="btn btn--dark btn--sm" type="button" data-copy="4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" data-label="Копировать SOL" data-copied-label="Скопировано">Копировать SOL</button><a class="btn btn--dark btn--sm" href="https://solscan.io/account/4vsXfhPXgwmP2cDdypGf9QrmdpMUhxCxRJ5aDDPxfsYo" target="_blank" rel="noopener">Solscan</a></div></div>
+        <div class="chain"><b>ETH · Ethereum</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn btn--dark btn--sm" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Копировать ETH" data-copied-label="Скопировано">Копировать ETH</button><a class="btn btn--dark btn--sm" href="https://etherscan.io/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Etherscan</a></div></div>
+        <div class="chain"><b>BTC · Bitcoin</b><div class="addr-line">bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00</div><div class="row"><button class="btn btn--dark btn--sm" type="button" data-copy="bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" data-label="Копировать BTC" data-copied-label="Скопировано">Копировать BTC</button><a class="btn btn--dark btn--sm" href="https://mempool.space/address/bc1qgtc26k0vuu8j3uhpvpsevgladug5n6en4jzm00" target="_blank" rel="noopener">Mempool</a></div></div>
+        <div class="chain"><b>BASE · Base</b><div class="addr-line">0x379F62A4EFFDAE688c5963B44667501f481CFE6D</div><div class="row"><button class="btn btn--dark btn--sm" type="button" data-copy="0x379F62A4EFFDAE688c5963B44667501f481CFE6D" data-label="Копировать Base" data-copied-label="Скопировано">Копировать Base</button><a class="btn btn--dark btn--sm" href="https://basescan.org/address/0x379F62A4EFFDAE688c5963B44667501f481CFE6D" target="_blank" rel="noopener">Basescan</a></div></div>
+      </div>
+    </div>
+  </details>
+</section>
+</main>
+<footer class="footer">
+  <p>elghaly, LLC · Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки по записи.</p>
+  <p class="footer__nav"><a href="https://chatting.elghaly.dev">💬 Chatting</a> · <a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="#refunds">Возвраты</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-анализ публичных страниц</span></p>
+</footer>
+</div>
+<script src="../page-menu.js" defer></script>
+<script src="../js/quay-site.js"></script>
+<script src="../pay.js"></script>
+</body>
+</html>

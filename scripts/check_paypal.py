@@ -16,7 +16,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit, parse_qs
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BUSINESS = "1918825752@qq.com"
+# Payments Standard (cgi-bin/webscr) links are no longer used; any one found fails.
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
 
@@ -110,8 +110,7 @@ def check(site, expected, pages, locked=None):
             if u.scheme != "https" or u.hostname != "www.paypal.com" or u.path != "/cgi-bin/webscr":
                 bad("not a PayPal Payments Standard URL: " + href)
                 continue
-            if "business=" + BUSINESS.replace("@", "%40") not in u.query:
-                bad("business is not %s (URL-encoded)" % BUSINESS)
+            bad("Payments Standard link is not allowed; use a locked Payment Link or email ordering")
             q = {k: v[0] for k, v in parse_qs(u.query, keep_blank_values=True).items()}
             sku = q.get("item_number", "")
             if sku not in expected:
@@ -159,8 +158,7 @@ def check(site, expected, pages, locked=None):
 SITE = "https://quay-35.elghaly.dev"
 # sku: (amount, "once" | "monthly") — must match the prices on the product cards.
 EXPECTED = {
-    "quay-land": ("149.00", "monthly"),
-    "node-watch": ("79.00", "monthly"),
+    # quay-land and node-watch are ordered by email (mailto:support@elghaly.dev).
     "score-report": ("49.00", "once"),
     "flex-card-pack": ("29.00", "once"),
     "fee-review": ("199.00", "once"),

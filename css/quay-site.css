@@ -1,0 +1,616 @@
+/* QUAY-35 site — layout and components on top of quay-glass.css (chatting.elghaly.dev palette). */
+
+.brand--quay {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.badge-35 {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-35__dot {
+  color: var(--gold);
+  font-size: 0.55rem;
+  line-height: 1;
+}
+
+.nav {
+  overflow: visible;
+}
+
+.nav__top {
+  row-gap: 0.5rem;
+}
+
+.nav__links--quay {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 899px) {
+  .nav__links--quay .nav__hide-sm {
+    display: none;
+  }
+}
+
+.nav__spacer {
+  flex: 1 1 auto;
+  min-width: 0.5rem;
+}
+
+a.lang-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.lang-btn[aria-current="page"] {
+  border-color: var(--line);
+  background: var(--card);
+}
+
+.nav__top > .lang-switch {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--on-bg-line) transparent;
+  padding: 2px 0 4px;
+  box-sizing: border-box;
+}
+
+.nav__top > .lang-switch::-webkit-scrollbar {
+  height: 4px;
+}
+
+.nav__top > .lang-switch::-webkit-scrollbar-thumb {
+  background: var(--on-bg-line);
+  border-radius: 999px;
+}
+
+@media (min-width: 1280px) {
+  .nav__top > .lang-switch {
+    flex: 0 1 auto;
+    width: auto;
+    margin-inline-start: 0.5rem;
+    padding-bottom: 2px;
+  }
+}
+
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 4rem;
+}
+
+.prose a:not(.btn):not(.lang-btn):not(.card) {
+  color: var(--on-bg-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.quay-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.quay-hero--solo {
+  grid-template-columns: 1fr;
+  padding-top: 2rem;
+}
+
+.quay-lockup {
+  margin: 0 0 0.85rem;
+  font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+@media (max-width: 820px) {
+  .quay-hero {
+    grid-template-columns: 1fr;
+    padding-top: 1.75rem;
+  }
+}
+
+.quay-hero__title {
+  margin: 0.75rem 0;
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.quay-hero__lede {
+  margin: 0;
+  color: var(--on-bg-soft);
+  max-width: 38em;
+  font-size: 1.0625rem;
+}
+
+.quay-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.35rem;
+}
+
+.quay-art {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  aspect-ratio: 1080 / 1350;
+  box-shadow: var(--shadow);
+}
+
+.quay-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quay-art--wide {
+  aspect-ratio: auto;
+  max-width: 32rem;
+  margin: 1.75rem auto 0;
+}
+
+.trust {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 820px) {
+  .trust {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trust li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.trust b {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.trust .tick {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--gold) 22%, transparent);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  counter-reset: quay-step;
+}
+
+@media (max-width: 820px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.steps li {
+  counter-increment: quay-step;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.steps li::before {
+  content: counter(quay-step, decimal-leading-zero);
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+}
+
+.steps b {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 980px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.product-card--feature {
+  border-color: var(--line-2);
+  box-shadow: var(--shadow-hi);
+}
+
+.product-badge {
+  align-self: flex-start;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  background: var(--gold);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-weight: 700;
+}
+
+.spec {
+  margin: 0.85rem 0 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.92rem;
+}
+
+.spec dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 0.1rem;
+}
+
+.spec dd {
+  margin: 0;
+  color: var(--text);
+}
+
+.buy {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.price small {
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.buy .alt {
+  flex-basis: 100%;
+  text-align: end;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.product-card--ask {
+  border-style: dashed;
+  background: transparent;
+  box-shadow: none;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 820px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel-note {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.where-list {
+  margin: 0.65rem 0;
+  padding-inline-start: 1.25rem;
+}
+
+.where-list li {
+  margin: 0.5rem 0;
+  color: var(--muted);
+}
+
+details.wallets {
+  margin-top: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+details.wallets summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+details.wallets summary::-webkit-details-marker {
+  display: none;
+}
+
+details.wallets summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+details.wallets[open] summary::after {
+  content: "–";
+}
+
+.wallet-body {
+  padding: 0 1.35rem 1.35rem;
+}
+
+.wallet-body > p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin: 0 0 0.75rem;
+}
+
+.network-warn {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-sm);
+  background: var(--card-2);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.chains {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .chains {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chain {
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card-2);
+}
+
+.chain b {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+}
+
+.addr-line {
+  font: 0.82rem ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.row .btn {
+  min-height: 40px;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.btn--sm {
+  min-height: 40px;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.recourse {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.sub-hero {
+  padding: 1.75rem 0 0.5rem;
+}
+
+.sub-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.sub-hero .quay-hero__lede + .quay-hero__lede {
+  margin-top: 0.65rem;
+}
+
+.report-sheet {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 1.35rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.report-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.report-row:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.report-row.single {
+  grid-template-columns: 1fr;
+}
+
+.report-row dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.report-row dd {
+  margin: 0;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+}
+
+.redacted {
+  color: var(--muted);
+  font-style: italic;
+  font-family: var(--font);
+}
+
+html[lang|="ar"] .quay-hero__title,
+html[lang|="ar"] .section__title,
+html[lang|="ar"] .card__title {
+  letter-spacing: 0;
+}
+
+html[lang|="zh"] .quay-hero__title,
+html[lang|="zh"] .section__title {
+  letter-spacing: 0;
+}
+
+.lic-badges {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.lic-badges > a,
+.lic-badges > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin: 0.2rem 0.15rem;
+  padding: 0 0.6rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  vertical-align: middle;
+}
+
+.lic-badges > a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.lic-badges > span {
+  text-decoration: none;
+}

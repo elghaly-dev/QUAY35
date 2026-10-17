@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Разбор комиссий — QUAY · 35 ElGhaly</title>
+<meta name="description" content="Разбор priority fee и tip за 48 ч по публичным подписям. $199 разово."/>
+<meta name="theme-color" content="#5a4fc0"/>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="../../css/quay-glass.css"/>
+<link rel="stylesheet" href="../../css/quay-site.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к основному содержанию</a>
+<nav class="nav" aria-label="Сайт">
+  <div class="nav__in">
+    <div class="nav__top">
+      <a class="brand brand--quay" href="/ru/">QUAY</a>
+      <span class="badge-35" aria-label="35"><span class="badge-35__dot" aria-hidden="true">●</span> 35</span>
+      <div class="nav__links nav__links--quay nav__links--always">
+        <a href="/ru/#products">Продукты</a>
+        <a href="/ru/quay/fees.html" aria-current="page">Разбор комиссий</a>
+        <a href="/ru/quay/hold.html">Отложено</a>
+      </div>
+      <span class="nav__spacer" aria-hidden="true"></span>
+      <div class="lang-switch" aria-label="Язык">
+        <a class="lang-btn" href="/quay/fees.html" hreflang="en">English</a>
+        <a class="lang-btn" href="/ar/quay/fees.html" hreflang="ar">العربية</a>
+        <a class="lang-btn" href="/ru/quay/fees.html" hreflang="ru" aria-current="page">Русский</a>
+        <a class="lang-btn" href="/zh/quay/fees.html" hreflang="zh-Hans">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="page prose">
+<main id="main">
+<section class="sub-hero">
+  <div class="page-menu" data-page-menu style="display:flex;justify-content:flex-end;min-height:46px;margin:0 0 .5rem"></div>
+  <p class="kicker">QUAY · Разбор комиссий</p>
+  <h1>Разбор priority fee и tip</h1>
+  <p class="quay-hero__lede">Читаем публичные подписи и сравниваем priority fee/tip с тем, что транзакции реально платили и где landed.</p>
+  <p class="quay-hero__lede">Одна страница за 48 ч после полного brief. Только рекомендация — не трогаем config, кошелёк, транзакции.</p>
+</section>
+
+<section class="section">
+  <div class="two-col">
+    <article class="card">
+      <div class="card__body">
+        <h2 class="card__title">Что прислать</h2>
+        <p>Всё это публичные данные. Не присылайте то, чего нет в chain/explorer.</p>
+        <ul>
+          <li><strong>До 200 подписей транзакций</strong> — Только подписи. Никогда private key, seed или RPC с token.</li>
+          <li><strong>Текущий priority fee</strong></li>
+          <li><strong>Текущий tip</strong></li>
+          <li><strong>Venue или aggregator маршрута</strong></li>
+        </ul>
+        <p class="recourse">Не запрашиваем, не показываем и не принимаем API key, RPC с token или private key.</p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__body">
+        <h2 class="card__title">Что получите</h2>
+        <p>Одна страница за 48 ч после полного brief:</p>
+        <ul>
+          <li>Percentile landed для текущих настроек</li>
+          <li>Целевой percentile с обоснованием</li>
+          <li>Когда повышать и условие триггера</li>
+          <li>Где переплата и waste на landed tx</li>
+          <li>Что не вывели из подписей — явно по имени</li>
+        </ul>
+        <p class="recourse">Если из подписи не прочитать — в отчёте <strong>UNKNOWN</strong>, не догадка.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="card panel">
+  <div class="card__body">
+    <h2 class="section__title">Чего не видно только по подписям</h2>
+    <p>Подписи показывают submit и landed, не всю операцию. Минимум не видим:</p>
+    <ul class="where-list">
+      <li><strong>Ваши fills</strong> — Достигла ли landed tx нужного trade outcome</li>
+      <li><strong>Вашу стратегию</strong> — Intent, sizing, timing rules за каждым send</li>
+      <li><strong>RPC latency</strong> — Сколько node/провайдеру на propagate</li>
+      <li><strong>Почему упала конкретная tx</strong> Если failure не on-chain (simulation, drop, client abort)</li>
+    </ul>
+    <p class="network-warn">Всё, что не выводится из подписей, — <strong>UNKNOWN</strong>. Пробелы не заполняем.</p>
+  </div>
+</section>
+
+<section class="section">
+  <p class="kicker">Пример макета — не реальный отчёт</p>
+  <div class="report-sheet">
+    <h3 class="card__title">Fee review · одна страница (redacted)</h3>
+    <div class="report-row">
+      <div><dt>Sample scope</dt><dd><span class="redacted">[venue name]</span> · <span class="redacted">[N signatures reviewed]</span></dd></div>
+      <div><dt>Settings as submitted</dt><dd>Priority: <span class="redacted">[your value]</span> · Tip: <span class="redacted">[your value]</span></dd></div>
+    </div>
+    <div class="report-row">
+      <div><dt>Текущие настройки — landed percentile</dt><dd><span class="redacted">[percentile band + short note]</span></dd></div>
+      <div><dt>Рекомендуемый target percentile</dt><dd><span class="redacted">[target band + reasoning inline]</span></dd></div>
+    </div>
+    <div class="report-row single">
+      <div><dt>Когда повышать</dt><dd><span class="redacted">[specific condition that should trigger a raise — e.g. queue depth, failure class, time window]</span></dd></div>
+    </div>
+    <div class="report-row single">
+      <div><dt>Переплата</dt><dd><span class="redacted">[venue or route]</span> · <span class="redacted">[wasted amount per landed tx, where measurable]</span></dd></div>
+    </div>
+    <div class="report-row single">
+      <div><dt>Could not determine (UNKNOWN)</dt><dd><span class="redacted">[each gap named — e.g. fill outcome, RPC latency, off-chain failure reason]</span></dd></div>
+    </div>
+  </div>
+</section>
+
+<section class="card panel">
+  <div class="card__body">
+    <h2 class="section__title">Цена и intake</h2>
+    <p class="price">$199</p>
+    <p class="section__lead">Разово · на английском · PayPal или invoice в ответе</p>
+    <p>PayPal здесь + brief с PayPal transaction ID, или brief сначала и invoice после подтверждения. Формы на странице нет.</p>
+    <div class="quay-hero__cta">
+      <a class="btn btn--primary" href="https://www.paypal.com/ncp/payment/B27KHRX83CNP6" aria-label="PayPal: Fee review, $199 разово">Оплатить через PayPal</a>
+      <a class="btn btn--dark" href="mailto:support@elghaly.dev?subject=QUAY%20fee%20review&amp;body=QUAY%20fee%20review%20%E2%80%94%20complete%20brief%0A%0A1.%20Transaction%20signatures%20(up%20to%20200%2C%20signatures%20only%3A%20no%20keys%2C%20no%20seed%20phrases%2C%20no%20RPC%20URLs%20with%20tokens)%0A%0A%5Bpaste%20signatures%20or%20explorer%20links%5D%0A%0A2.%20Current%20priority-fee%20setting%3A%0A%0A3.%20Current%20tip%20setting%3A%0A%0A4.%20Venue%20or%20aggregator%20you%20route%20through%3A%0A">Brief — support@elghaly.dev</a>
+    </div>
+    <p class="recourse">Письменная рекомендация по публичным chain-данным. Config/кошелёк/tx не трогаем. Следование может не улучшить landed или cost — не обещаем. Без claims о доходе/экономии.</p>
+  </div>
+</section>
+
+<section class="card panel" id="refunds">
+  <div class="card__body">
+    <h2 class="section__title">Возвраты</h2>
+    <p>Хотите деньги назад — получите.</p>
+    <p>Без формы, причины, срока и исключений. Напишите на <a href="mailto:support@elghaly.dev">support@elghaly.dev</a> о возврате.</p>
+    <p>На всё QUAY — fee review, Land, карты, Node Watch. До старта или после дelivery.</p>
+    <p><strong>Оплата PayPal здесь или через shop checkout</strong> — На ту же карту или PayPal, 5–10 раб. дней. Можно оспорить в PayPal.</p>
+    <p><strong>Кошелёк</strong> — На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Только адрес под вашим контролем; deposit биржи — нет.</p>
+    <p>Лучше вернуть деньги, чем держать то, что клиент не хочет нам оставлять.</p>
+    <p><a href="/ru/#where">Где мы</a></p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <p><a href="mailto:support@elghaly.dev">support@elghaly.dev</a></p>
+  <p>elghaly, LLC · Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки по записи.</p>
+  <p class="footer__nav"><a href="https://chatting.elghaly.dev">💬 Chatting</a> · <a href="https://elghaly.dev/about.html">About</a> · <a href="https://elghaly.dev/contact.html">Contact</a> · <a href="#refunds">Возвраты</a> · <a href="https://elghaly.dev/delivery.html">Delivery</a> · <a href="https://elghaly.dev/terms.html">Terms</a> · <a href="https://elghaly.dev/privacy.html">Privacy</a></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE">Code: MIT</a> <a href="https://github.com/Alarm2024">Open source</a> <span>AI-анализ публичных on-chain данных</span></p>
+</footer>
+</div>
+<script src="../../page-menu.js" defer></script>
+</body>
+</html>

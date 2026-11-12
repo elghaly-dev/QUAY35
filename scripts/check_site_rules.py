@@ -13,7 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 FOOTER_URLS = [
     "https://chatting.elghaly.dev",
     "https://elghaly.dev/about.html",
-    "https://elghaly.dev/contact.html",
+    "mailto:support@elghaly.dev",
     "https://elghaly.dev/delivery.html",
     "https://elghaly.dev/terms.html",
     "https://elghaly.dev/privacy.html",

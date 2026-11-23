@@ -141,6 +141,16 @@ const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const road=document.querySelector('.road'),stops=[...document.querySelectorAll('.st')],bed=document.getElementById('bed'),line=document.getElementById('line');let len=1;
 function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{const n=s.querySelector('.node').getBoundingClientRect();return[n.left+n.width/2-r.left,n.top+n.height/2-r.top]}
 </style>
+
+<style>
+/* ported verbatim from elghaly.dev EN: wordmark, signs, divider, heard title */
+.mark { margin: 18px 0 0; /* Room above and below so no glyph is ever clipped by the text clip. */ padding: .12em .08em .18em; font-family: "Cinzel", Georgia, serif; font-style: normal; font-weight: 700; font-size: clamp(3rem, 13.5vw, 6rem); line-height: 1.15; letter-spacing: .06em; overflow: visible; background: linear-gradient(100deg, var(--gold-soft) 0%, var(--gold) 45%, #9f7fd1 100%); -webkit-background-clip: text; background-clip: text; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; }
+.signs { margin: 14px 0 0; font-size: 1.1rem; letter-spacing: .3em; }
+/* The signs always read left to right. */ .signs, .team__signs { direction: ltr; unicode-bidi: isolate; }
+.footer .signs { font-size: 1rem; letter-spacing: .25em; }
+.rule { width: 120px; height: 1px; margin: 26px auto 0; border: 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.heard__title { margin: 0 0 20px; text-align: center; font-weight: 500; font-size: clamp(1.2rem, 5vw, 1.6rem); letter-spacing: .01em; }
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>

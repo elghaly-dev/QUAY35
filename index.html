@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>QUAY — 35 ElGhaly</title>
 <meta name="description" content="Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings."/>
-<meta name="theme-color" content="#5a4fc0"/>
+<meta name="theme-color" content="#07080c"/>
 <link rel="canonical" href="https://quay-35.elghaly.dev/"/>
 <link rel="alternate" hreflang="en" href="https://quay-35.elghaly.dev/"/>
 <link rel="alternate" hreflang="ar" href="https://quay-35.elghaly.dev/ar/"/>
@@ -30,6 +30,52 @@
 <meta name="twitter:title" content="QUAY — 35 ElGhaly"/>
 <meta name="twitter:description" content="Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings."/>
 <meta name="twitter:image" content="https://quay-35.elghaly.dev/og.png"/>
+
+<style>
+/* ported verbatim from elghaly.dev EN */
+:root {
+  --night: #07080c;
+  --night-2: #0d1120;
+  --tile: #10131f;
+  --line: rgba(196, 161, 236, .22);
+  --gold: #c4a1ec;
+  --gold-soft: #e6d4fa;
+  --lapis: #2a4cb3;
+  --turquoise: #34b8ac;
+  --ivory: #efe8d8;
+  --muted: #a39b88;
+  --radius: 18px;
+  color-scheme: dark;
+}
+
+.road{position:relative;margin:30px auto 0;max-width:560px;padding:10px 0 20px}
+
+.road__t{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400;color:var(--gold);font-size:clamp(1.3rem,5.5vw,1.7rem);margin:0 0 6px}
+
+.road .road__svg{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+
+.road path{fill:none;stroke-linecap:round}
+
+.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--gold);transition:.7s}
+
+.st.L .node{left:0%;transform:translateX(14px)}
+
+.st.R .node{right:0%;transform:translateX(-14px)}
+
+.st.on .node{background:var(--gold-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
+.node{transition:none}
+)();
+    </script>
+    <p>elghaly</p>
+    <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license">© elghaly · CC BY 4.0</a></p>
+  </footer>
+  <script src="/page-menu.js" defer></script>
+<script>
+document.documentElement.classList.add('js');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const road=document.querySelector('.road'),stops=[...document.querySelectorAll('.st')],bed=document.getElementById('bed'),line=document.getElementById('line');let len=1;
+function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{const n=s.querySelector('.node').getBoundingClientRect();return[n.left+n.width/2-r.left,n.top+n.height/2-r.top]}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -180,6 +226,7 @@
     </div>
   </details>
 </section>
+<svg class="road__svg" aria-hidden="true"><path class="bed" id="bed"/><path class="line" id="line"/></svg>
 </main>
 <footer class="footer">
   <p>elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.</p>

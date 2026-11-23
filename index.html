@@ -38,8 +38,8 @@
   --night-2: #0d1120;
   --tile: #10131f;
   --line: rgba(196, 161, 236, .22);
-  --gold: #c4a1ec;
-  --gold-soft: #e6d4fa;
+  --lilac: #c4a1ec;
+  --lilac-soft: #e6d4fa;
   --lapis: #2a4cb3;
   --turquoise: #34b8ac;
   --ivory: #efe8d8;
@@ -50,19 +50,19 @@
 
 .road{position:relative;margin:30px auto 0;max-width:560px;padding:10px 0 20px}
 
-.road__t{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400;color:var(--gold);font-size:clamp(1.3rem,5.5vw,1.7rem);margin:0 0 6px}
+.road__t{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400;color:var(--lilac);font-size:clamp(1.3rem,5.5vw,1.7rem);margin:0 0 6px}
 
 .road .road__svg{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible}
 
 .road path{fill:none;stroke-linecap:round}
 
-.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--gold);transition:.7s}
+.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--lilac);transition:.7s}
 
 .st.L .node{left:0%;transform:translateX(14px)}
 
 .st.R .node{right:0%;transform:translateX(-14px)}
 
-.st.on .node{background:var(--gold-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
+.st.on .node{background:var(--lilac-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
 .node{transition:none}
 )();
     </script>
@@ -102,13 +102,13 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
 
 .st.R{justify-content:flex-start;padding-right:14%}
 
-.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--gold);transition:.7s}
+.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--lilac);transition:.7s}
 
 .st.L .node{left:0%;transform:translateX(14px)}
 
 .st.R .node{right:0%;transform:translateX(-14px)}
 
-.st.on .node{background:var(--gold-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
+.st.on .node{background:var(--lilac-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
 
 .card{width:100%;background:linear-gradient(160deg,rgba(26,20,48,.9),rgba(13,17,32,.92));border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;align-items:center;box-shadow:0 0 28px rgba(159,127,209,.14)}
 
@@ -144,11 +144,11 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
 
 <style>
 /* ported verbatim from elghaly.dev EN: wordmark, signs, divider, heard title */
-.mark { margin: 18px 0 0; /* Room above and below so no glyph is ever clipped by the text clip. */ padding: .12em .08em .18em; font-family: "Cinzel", Georgia, serif; font-style: normal; font-weight: 700; font-size: clamp(3rem, 13.5vw, 6rem); line-height: 1.15; letter-spacing: .06em; overflow: visible; background: linear-gradient(100deg, var(--gold-soft) 0%, var(--gold) 45%, #9f7fd1 100%); -webkit-background-clip: text; background-clip: text; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; }
+.mark { margin: 18px 0 0; /* Room above and below so no glyph is ever clipped by the text clip. */ padding: .12em .08em .18em; font-family: "Cinzel", Georgia, serif; font-style: normal; font-weight: 700; font-size: clamp(3rem, 13.5vw, 6rem); line-height: 1.15; letter-spacing: .06em; overflow: visible; background: linear-gradient(100deg, var(--lilac-soft) 0%, var(--lilac) 45%, #9f7fd1 100%); -webkit-background-clip: text; background-clip: text; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; }
 .signs { margin: 14px 0 0; font-size: 1.1rem; letter-spacing: .3em; }
 /* The signs always read left to right. */ .signs, .team__signs { direction: ltr; unicode-bidi: isolate; }
 .footer .signs { font-size: 1rem; letter-spacing: .25em; }
-.rule { width: 120px; height: 1px; margin: 26px auto 0; border: 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.rule { width: 120px; height: 1px; margin: 26px auto 0; border: 0; background: linear-gradient(90deg, transparent, var(--lilac), transparent); }
 .heard__title { margin: 0 0 20px; text-align: center; font-weight: 500; font-size: clamp(1.2rem, 5vw, 1.6rem); letter-spacing: .01em; }
 </style>
 </head>
@@ -302,7 +302,10 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
   </details>
 </section>
 <svg class="road__svg" aria-hidden="true"><path class="bed" id="bed"/><path class="line" id="line"/></svg>
-      <ol class="stops" id="stops" aria-label="Our projects">
+      <h1 class="mark" lang="en" dir="ltr">elghaly</h1>
+<p class="signs" aria-hidden="true">✝️ 🧿 🪬</p>
+<hr class="rule">
+<ol class="stops" id="stops" aria-label="Our projects">
         <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-35-480.webp" width="480" height="480" alt="35" loading="lazy" decoding="async"><div class="txt"><h3>35</h3><span class="pill p-pv">Private</span><p>A first look at the 35 project.</p><a class="go" href="https://35.elghaly.dev/" rel="noopener noreferrer">Open 35</a></div></div></li>
         <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-iris-480.webp" width="480" height="480" alt="Iris" loading="lazy" decoding="async"><div class="txt"><h3>Iris</h3><span class="pill p-on">Active</span><p>A clear view, made simple.</p><a class="go" href="https://iris-35.elghaly.dev/" rel="noopener noreferrer">Open Iris</a></div></div></li>
         <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-plumb-480.webp" width="480" height="480" alt="Plumb" loading="lazy" decoding="async"><div class="txt"><h3>Plumb</h3><span class="pill p-on">Active</span><p>Solana desk insight.</p><a class="go" href="https://plumb-35.elghaly.dev/" rel="noopener noreferrer">Open Plumb</a></div></div></li>

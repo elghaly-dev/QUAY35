@@ -85,6 +85,50 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
 .rule { width: 120px; height: 1px; margin: 26px auto 0; border: 0; background: linear-gradient(90deg, transparent, var(--lilac), transparent); }
 .heard__title { margin: 0 0 20px; text-align: center; font-weight: 500; font-size: clamp(1.2rem, 5vw, 1.6rem); letter-spacing: .01em; }
 </style>
+<style>
+/* stops + cards carried from main index.html */
+
+
+.stops{list-style:none;margin:0;padding:30px 0 10px;position:relative}
+
+
+.st{position:relative;margin:0 0 54px;display:flex}
+
+
+.st.L{justify-content:flex-end;padding-left:14%}
+
+
+.st.R{justify-content:flex-start;padding-right:14%}
+
+
+.card{width:100%;background:linear-gradient(160deg,rgba(26,20,48,.9),rgba(13,17,32,.92));border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;align-items:center;box-shadow:0 0 28px rgba(159,127,209,.14)}
+
+
+.card img{width:76px;height:76px;border-radius:14px;object-fit:cover;flex:none;border:1px solid rgba(196,161,236,.4)}
+
+
+.st.portrait .card{flex-direction:column;text-align:center;padding:14px 14px 18px}
+
+
+.st.portrait .card img{width:100%;height:auto;aspect-ratio:3/4;border-radius:14px;object-position:center top}
+
+
+.js .st .card{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+
+
+.js .st.L .card{transform:translateX(50px)}
+
+ .js .st.R .card{transform:translateX(-50px)}
+
+
+.js .st.on .card{opacity:1;transform:none}
+
+.js .st .card{opacity:1!important;transform:none!important;transition:none}
+
+
+
+.st.textonly .card{padding:18px 16px}
+</style>
 </head>
 <body>
 <h1 class="mark" lang="en" dir="ltr">elghaly</h1>

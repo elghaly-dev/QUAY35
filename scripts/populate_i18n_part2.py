@@ -233,13 +233,13 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("lic_oss", "Open source", "Open source", "Open source")
     add(
         "lic_ai",
-        "تحليل لصفحات عامة بمساعدة الخادم الأمين",
+        "تحليل لصفحات عامة بمساعدة الغالي",
         "Анализ публичных страниц с Faithful Servant",
         "Faithful Servant 辅助分析公开页面",
     )
     add(
         "lic_ai_chain",
-        "تحليل لبيانات عامة على السلسلة بمساعدة الخادم الأمين",
+        "تحليل لبيانات عامة على السلسلة بمساعدة الغالي",
         "Анализ публичных on-chain данных с Faithful Servant",
         "Faithful Servant 辅助分析公开链上数据",
     )

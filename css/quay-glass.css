@@ -54,8 +54,9 @@
 
 :root {
   color-scheme: dark;
-  --bg: #5a4fc0;
-  --bg-2: #6a5fd0;
+  /* page night, as elghaly.dev: --night #07080c, --night-2 #0d1120 */
+  --bg: #07080c;
+  --bg-2: #0d1120;
   --card: #0d0b1f;
   --card-2: #17142f;
   --line: #1c1838;
@@ -87,7 +88,11 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  background: var(--bg);
+  /* the elghaly.dev EN page background: night with a lapis glow on top */
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(42, 76, 179, .30), transparent 60%),
+    radial-gradient(80% 50% at 50% 110%, rgba(196, 161, 236, .10), transparent 70%),
+    var(--bg);
   scroll-behavior: smooth;
 }
 
@@ -108,7 +113,8 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+  background: none;
+  display: none;
 }
 
 img {
@@ -150,13 +156,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(90, 79, 192, 0.94);
+  background: rgba(13, 17, 32, 0.94);
   border-bottom: 1px solid var(--on-bg-line);
 }
 
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .nav {
-    background: rgba(90, 79, 192, 0.78);
+    background: rgba(13, 17, 32, 0.7);
     -webkit-backdrop-filter: saturate(160%) blur(16px);
     backdrop-filter: saturate(160%) blur(16px);
   }
@@ -412,7 +418,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(90, 79, 192, 0.2) 0%, rgba(90, 79, 192, 0.45) 60%);
+  background: linear-gradient(180deg, rgba(7, 8, 12, 0.2) 0%, rgba(7, 8, 12, 0.45) 60%);
 }
 
 .hero__in {
@@ -807,7 +813,7 @@ a.card:hover .card__media img {
   background: var(--card-2);
 }
 
-/* A letter on a small tile of the page purple: white on #5a4fc0 is 6.3:1. */
+/* A letter on a small tile of the page night (white on #07080c).  */
 .link__thumb--letter {
   display: grid;
   place-items: center;

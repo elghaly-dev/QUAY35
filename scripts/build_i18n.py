@@ -182,8 +182,8 @@ STRINGS: dict[str, dict[str, str]] = {
     "fees_cannot_title": {
         "en": "What we cannot tell you from signatures alone",
         "ar": "ما لا نستطيع قوله من التوقيعات وحدها",
-        "ru": "Чего не видно только по подписям",
-        "zh": "仅凭签名无法告知的内容",
+        "ru": "Чего не скажут одни подписи",
+        "zh": "签名无法告知的内容",
     },
     "fees_disclaimer": {
         "en": "This is a written recommendation based on public chain data. We do not touch your config, your wallet, or your transactions. Following the recommendation may not improve your landing rate or lower your cost, and we do not promise that it will. We make no claim about earnings, returns or savings.",
@@ -259,9 +259,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "fees_lede2": {
         "en": "You receive one written page within 48 hours of a complete brief. This is a recommendation, nothing more: we do not change your config, your wallet, or your transactions.",
-        "ar": "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية فقط — لا نغيّر config أو محفظتك أو معاملاتك.",
-        "ru": "Одна страница за 48 ч после полного brief. Только рекомендация — не трогаем config, кошелёк, транзакции.",
-        "zh": "完整 brief 后 48 小时内交付一页书面报告。仅为建议——不改动配置、钱包或交易。",
+        "ar": "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية لا أكثر — لا نغيّر config أو محفظتك أو معاملاتك.",
+        "ru": "Одна страница за 48 ч после полного brief. Это рекомендация, не более — не трогаем config, кошелёк, транзакции.",
+        "zh": "完整 brief 后 48 小时内交付一页书面报告。这是一份建议——不改动配置、钱包或交易。",
     },
     "fees_meta_description": {
         "en": "48-hour priority-fee and tip configuration review from public transaction signatures. $199 once.",
@@ -285,7 +285,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "en": "Once · In English · PayPal or invoice on reply",
         "ar": "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد",
         "ru": "Разово · на английском · PayPal или invoice в ответе",
-        "zh": "一次性 · 仅英文 · PayPal 或回复发票",
+        "zh": "一次性 · 英文 · PayPal 或回复发票",
     },
     "fees_price_p": {
         "en": "Pay with PayPal here and send your brief with the PayPal transaction ID, or send the brief first and pay on the invoice we send when we confirm it. No form on this page collects anything.",
@@ -373,9 +373,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "fees_send_li1": {
         "en": "Just signatures. Never a private key, never a seed phrase, never an RPC URL with a token in it.",
-        "ar": "توقيعات فقط. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
-        "ru": "Только подписи. Никогда private key, seed или RPC с token.",
-        "zh": "仅签名。不要私钥、助记词或带 token 的 RPC。",
+        "ar": "التوقيعات تكفي. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
+        "ru": "Достаточно подписей. Никогда private key, seed или RPC с token.",
+        "zh": "签名就够了。不要私钥、助记词或带 token 的 RPC。",
     },
     "fees_send_li1_b": {
         "en": "Up to 200 transaction signatures",
@@ -462,10 +462,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "About",
     },
     "footer_contact": {
-        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
-        "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
+        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد مسبق.",
         "ru": "elghaly, LLC · Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
-        "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
+        "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话需预约。",
     },
     "footer_contact_link": {
         "en": "Contact",
@@ -703,9 +703,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "meta_description": {
         "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
-        "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة للقراءة فقط، وتنبيهات مراقبة RPC.",
+        "ar": "تقارير مكتبية لروبوتات سولانا: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة بصلاحية عرض، وتنبيهات مراقبة RPC.",
         "ru": "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, оценка mint с доступом на просмотр и RPC-watch.",
-        "zh": "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、只读 mint 评分与 RPC 监控提醒。",
+        "zh": "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、查看权限 mint 评分与 RPC 监控提醒。",
     },
     "meta_title": {
         "en": "QUAY — 35 ElGhaly",
@@ -745,9 +745,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "og_description": {
         "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
-        "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية، بطاقات إثبات، تقييم mint للقراءة فقط، وتنبيهات RPC.",
+        "ar": "تقارير مكتبية لروبوتات سولانا: ورقة أسبوعية، بطاقات إثبات، تقييم mint بصلاحية عرض، وتنبيهات RPC.",
         "ru": "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch.",
-        "zh": "Solana 机器人桌面报告：周报、证明卡片、只读 mint 评分与 RPC 提醒。",
+        "zh": "Solana 机器人桌面报告：周报、证明卡片、查看权限 mint 评分与 RPC 提醒。",
     },
     "og_image_alt": {
         "en": "QUAY — desk reports for Solana bots",
@@ -878,7 +878,7 @@ STRINGS: dict[str, dict[str, str]] = {
     "refunds_wallet_body": {
         "en": "back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.",
         "ar": "إلى العنوان المرسل منه، نفس الأصل والشبكة، خلال 3 أيام عمل ناقص رسوم الشبكة. أرسل من عنوان تتحكم به؛ لا نسترد عنوان إيداع exchange.",
-        "ru": "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Только адрес под вашим контролем; deposit биржи — нет.",
+        "ru": "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Отправляйте с адреса под вашим контролем; на deposit биржи вернуть не можем.",
         "zh": "退回来源地址，同资产同网络，3 个工作日内（扣网络费）。请用您控制的地址；无法退至交易所充值地址。",
     },
     "refunds_wallet_label": {
@@ -895,9 +895,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "score_blurb": {
         "en": "A view-access note on one mint. Not a sell bot, not advice.",
-        "ar": "ملاحظة للقراءة فقط على mint واحد. ليس bot بيع ولا نصيحة.",
+        "ar": "ملاحظة بصلاحية عرض على mint واحد. ليس bot بيع ولا نصيحة.",
         "ru": "Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.",
-        "zh": "单个 mint 只读说明。非卖出机器人，非投资建议。",
+        "zh": "单个 mint 的查看权限说明。非卖出机器人，非投资建议。",
     },
     "score_get": {
         "en": "A written note by email.",
@@ -1063,9 +1063,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "trust1_title": {
         "en": "Public data in",
-        "ar": "بيانات عامة فقط",
-        "ru": "Только публичные данные",
-        "zh": "只用公开数据",
+        "ar": "بيانات عامة",
+        "ru": "Публичные данные",
+        "zh": "公开数据",
     },
     "trust2_body": {
         "en": "No form, no reason, no time limit.",
@@ -1164,10 +1164,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "您发来 feed 之后。",
     },
     "where_contact": {
-        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
-        "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
-        "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки только по записи.",
-        "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
+        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد مسبق.",
+        "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
+        "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话需预约。",
     },
     "where_li1": {
         "en": "The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.",

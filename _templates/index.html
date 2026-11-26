@@ -31,6 +31,7 @@
 <meta name="twitter:description" content="<!--i18n:og_description-->Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.<!--/i18n:og_description-->"/>
 <meta name="twitter:image" content="https://quay-35.elghaly.dev/og.png"/>
 <style>
+html{overflow-x:hidden}
 /* ported verbatim from elghaly.dev EN */
 :root {
   --night: #07080c;
@@ -238,15 +239,7 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
   </details>
 </section>
 </main>
-<footer class="footer">
-  <p><!--i18n:footer_contact-->elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.<!--/i18n:footer_contact--></p>
-  <p class="footer__nav"><a href="https://chatting.elghaly.dev"><!--i18n:footer_chatting-->💬 Chatting<!--/i18n:footer_chatting--></a> · <a href="https://elghaly.dev/about.html"><!--i18n:footer_about-->About<!--/i18n:footer_about--></a> · <a href="mailto:support@elghaly.dev"><!--i18n:footer_contact_link-->Contact<!--/i18n:footer_contact_link--></a> · <a href="#refunds"><!--i18n:footer_refunds-->Refunds<!--/i18n:footer_refunds--></a> · <a href="https://elghaly.dev/delivery.html"><!--i18n:footer_delivery-->Delivery<!--/i18n:footer_delivery--></a> · <a href="https://elghaly.dev/terms.html"><!--i18n:footer_terms-->Terms<!--/i18n:footer_terms--></a> · <a href="https://elghaly.dev/privacy.html"><!--i18n:footer_privacy-->Privacy<!--/i18n:footer_privacy--></a></p>
-  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license"><!--i18n:lic_cc-->© elghaly · CC BY 4.0<!--/i18n:lic_cc--></a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE"><!--i18n:lic_mit-->Code: MIT<!--/i18n:lic_mit--></a> <a href="https://github.com/Alarm2024"><!--i18n:lic_oss-->Open source<!--/i18n:lic_oss--></a> <span><!--i18n:lic_ai-->Public-page analysis with the الغالي<!--/i18n:lic_ai--></span></p>
-</footer>
-</div>
-<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->page-menu.js" defer></script>
-<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->js/quay-site.js"></script>
-<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->pay.js"></script>
+<svg class="road__svg" aria-hidden="true"><path class="bed" id="bed"/><path class="line" id="line"/></svg>
 <ol class="stops" id="stops" aria-label="Our projects">
         <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-35-480.webp" width="480" height="480" alt="35" loading="lazy" decoding="async"><div class="txt"><h3>35</h3><span class="pill p-pv">Private</span><p>A first look at the 35 project.</p><a class="go" href="https://35.elghaly.dev/" rel="noopener noreferrer">Open 35</a></div></div></li>
         <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-iris-480.webp" width="480" height="480" alt="Iris" loading="lazy" decoding="async"><div class="txt"><h3>Iris</h3><span class="pill p-on">Active</span><p>A clear view, made simple.</p><a class="go" href="https://iris-35.elghaly.dev/" rel="noopener noreferrer">Open Iris</a></div></div></li>
@@ -260,5 +253,15 @@ function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{con
         <li class="st R portrait"><i class="node"></i><div class="card"><img src="/assets/anubis-2-480.webp" width="480" height="480" alt="Anubis" loading="lazy" decoding="async"><div class="txt"><h3>Anubis</h3><span class="pill p-soon">Coming soon</span><p>The guardian of the road.</p><span class="go go--off" aria-disabled="true">Coming soon</span></div></div></li>
         <li class="st L textonly"><i class="node"></i><div class="card"><div class="txt"><h3><span lang="ar" dir="rtl">حتحور</span> · <span lang="hi">हाथोर</span></h3><p><span lang="ar" dir="rtl">المحطة الجاية</span> · <span lang="hi">अगला पड़ाव</span></p><span class="go go--off" aria-disabled="true"><span lang="ar" dir="rtl">قريباً</span> · <span lang="hi">जल्द आ रहा है</span></span></div></div></li>
       </ol>
+<footer class="footer">
+  <p><!--i18n:footer_contact-->elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.<!--/i18n:footer_contact--></p>
+  <p class="footer__nav"><a href="https://chatting.elghaly.dev"><!--i18n:footer_chatting-->💬 Chatting<!--/i18n:footer_chatting--></a> · <a href="https://elghaly.dev/about.html"><!--i18n:footer_about-->About<!--/i18n:footer_about--></a> · <a href="mailto:support@elghaly.dev"><!--i18n:footer_contact_link-->Contact<!--/i18n:footer_contact_link--></a> · <a href="#refunds"><!--i18n:footer_refunds-->Refunds<!--/i18n:footer_refunds--></a> · <a href="https://elghaly.dev/delivery.html"><!--i18n:footer_delivery-->Delivery<!--/i18n:footer_delivery--></a> · <a href="https://elghaly.dev/terms.html"><!--i18n:footer_terms-->Terms<!--/i18n:footer_terms--></a> · <a href="https://elghaly.dev/privacy.html"><!--i18n:footer_privacy-->Privacy<!--/i18n:footer_privacy--></a></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license"><!--i18n:lic_cc-->© elghaly · CC BY 4.0<!--/i18n:lic_cc--></a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE"><!--i18n:lic_mit-->Code: MIT<!--/i18n:lic_mit--></a> <a href="https://github.com/Alarm2024"><!--i18n:lic_oss-->Open source<!--/i18n:lic_oss--></a> <span><!--i18n:lic_ai-->Public-page analysis with the الغالي<!--/i18n:lic_ai--></span></p>
+</footer>
+</div>
+<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->page-menu.js" defer></script>
+<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->js/quay-site.js"></script>
+<script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->pay.js"></script>
+
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title><!--i18n:meta_title-->QUAY — 35 ElGhaly<!--/i18n:meta_title--></title>
 <meta name="description" content="<!--i18n:meta_description-->Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.<!--/i18n:meta_description-->"/>
-<meta name="theme-color" content="#5a4fc0"/>
+<meta name="theme-color" content="#07080c"/>
 <link rel="canonical" href="<!--i18n:canonical_url-->https://quay-35.elghaly.dev/<!--/i18n:canonical_url-->"/>
 <link rel="alternate" hreflang="en" href="<!--i18n:hreflang_en-->https://quay-35.elghaly.dev/<!--/i18n:hreflang_en-->"/>
 <link rel="alternate" hreflang="ar" href="<!--i18n:hreflang_ar-->https://quay-35.elghaly.dev/ar/<!--/i18n:hreflang_ar-->"/>
@@ -30,6 +30,110 @@
 <meta name="twitter:title" content="<!--i18n:og_title-->QUAY — 35 ElGhaly<!--/i18n:og_title-->"/>
 <meta name="twitter:description" content="<!--i18n:og_description-->Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.<!--/i18n:og_description-->"/>
 <meta name="twitter:image" content="https://quay-35.elghaly.dev/og.png"/>
+<style>
+html{overflow-x:hidden}
+/* ported verbatim from elghaly.dev EN */
+:root {
+  --night: #07080c;
+  --night-2: #0d1120;
+  --tile: #10131f;
+  --line: rgba(196, 161, 236, .22);
+  --lilac: #c4a1ec;
+  --lilac-soft: #e6d4fa;
+  --lapis: #2a4cb3;
+  --turquoise: #34b8ac;
+  --ivory: #efe8d8;
+  --muted: #a39b88;
+  --radius: 18px;
+  color-scheme: dark;
+}
+
+.road{position:relative;margin:30px auto 0;max-width:560px;padding:10px 0 20px}
+
+.road__t{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400;color:var(--lilac);font-size:clamp(1.3rem,5.5vw,1.7rem);margin:0 0 6px}
+
+.road .road__svg{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+
+.road path{fill:none;stroke-linecap:round}
+
+.node{position:absolute;top:34px;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#1a1430;border:2px solid var(--lilac);transition:.7s}
+
+.st.L .node{left:0%;transform:translateX(14px)}
+
+.st.R .node{right:0%;transform:translateX(-14px)}
+
+.st.on .node{background:var(--lilac-soft);box-shadow:0 0 0 5px rgba(196,161,236,.18),0 0 22px 8px rgba(185,148,239,.75)}
+.node{transition:none}
+</style>
+<style>
+/* ported verbatim from elghaly.dev EN: wordmark, signs, divider, heard title */
+.mark { margin: 18px 0 0; /* Room above and below so no glyph is ever clipped by the text clip. */ padding: .12em .08em .18em; font-family: "Cinzel", Georgia, serif; font-style: normal; font-weight: 700; font-size: clamp(3rem, 13.5vw, 6rem); line-height: 1.15; letter-spacing: .06em; overflow: visible; background: linear-gradient(100deg, var(--lilac-soft) 0%, var(--lilac) 45%, #9f7fd1 100%); -webkit-background-clip: text; background-clip: text; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; }
+.signs { margin: 14px 0 0; font-size: 1.1rem; letter-spacing: .3em; }
+/* The signs always read left to right. */ .signs, .team__signs { direction: ltr; unicode-bidi: isolate; }
+.footer .signs { font-size: 1rem; letter-spacing: .25em; }
+.rule { width: 120px; height: 1px; margin: 26px auto 0; border: 0; background: linear-gradient(90deg, transparent, var(--lilac), transparent); }
+.heard__title { margin: 0 0 20px; text-align: center; font-weight: 500; font-size: clamp(1.2rem, 5vw, 1.6rem); letter-spacing: .01em; }
+</style>
+<style>
+/* stops + cards carried from main index.html */
+
+
+.stops{list-style:none;margin:0;padding:30px 0 10px;position:relative}
+
+
+.st{position:relative;margin:0 0 54px;display:flex}
+
+
+.st.L{justify-content:flex-end;padding-left:14%}
+
+
+.st.R{justify-content:flex-start;padding-right:14%}
+
+
+.card{width:100%;background:linear-gradient(160deg,rgba(26,20,48,.9),rgba(13,17,32,.92));border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;align-items:center;box-shadow:0 0 28px rgba(159,127,209,.14)}
+
+
+.card img{width:76px;height:76px;border-radius:14px;object-fit:cover;flex:none;border:1px solid rgba(196,161,236,.4)}
+
+
+.st.portrait .card{flex-direction:column;text-align:center;padding:14px 14px 18px}
+
+
+.st.portrait .card img{width:100%;height:auto;aspect-ratio:3/4;border-radius:14px;object-position:center top}
+
+
+.js .st .card{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+
+
+.js .st.L .card{transform:translateX(50px)}
+
+ .js .st.R .card{transform:translateX(-50px)}
+
+
+.js .st.on .card{opacity:1;transform:none}
+
+.js .st .card{opacity:1!important;transform:none!important;transition:none}
+
+
+
+.st.textonly .card{padding:18px 16px}
+</style>
+<style>
+/* road line, pills, card text and buttons from elghaly.dev EN (pill radius 2em) */
+.bed{stroke:rgba(196,161,236,.16);stroke-width:10}
+.line{stroke:#d9c6f7;stroke-width:3;filter:drop-shadow(0 0 6px #b794ef) drop-shadow(0 0 14px rgba(159,127,209,.8))}
+.pill{display:table;margin:4px 0 2px;padding:2px 10px;border-radius:2em;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(196,161,236,.45);color:var(--lilac-soft);background:rgba(196,161,236,.10)}
+.p-on{border-color:rgba(52,184,172,.6);color:#bdf3ec;background:rgba(52,184,172,.12)}
+.p-os{border-color:rgba(42,76,179,.8);color:#cfdbff;background:rgba(42,76,179,.22)}
+.p-pv{border-color:rgba(230,212,250,.5)}
+.p-soon{opacity:.75;border-style:dashed}
+.txt h3{display:block;margin:0;font-family:"Cinzel",Georgia,serif;font-weight:700;letter-spacing:.06em;font-size:1.05rem;background:linear-gradient(100deg,var(--lilac-soft),var(--lilac),#9f7fd1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.txt p{margin:3px 0 8px;font-size:.88rem;color:var(--ivory);line-height:1.35}
+.go{display:inline-block;font-size:.8rem;letter-spacing:.08em;text-decoration:none;color:var(--lilac-soft);border:1px solid rgba(196,161,236,.55);background:rgba(196,161,236,.10);border-radius:2em;padding:6px 14px}
+.go--off{opacity:.55}
+.go--gh{margin:2px 0 2px 4px}
+.mark,.signs{text-align:center}
+</style>
 </head>
 <body>
 <a class="skip" href="#main"><!--i18n:skip_main-->Skip to main content<!--/i18n:skip_main--></a>
@@ -53,6 +157,9 @@
     </div>
   </div>
 </nav>
+<h1 class="mark" lang="en" dir="ltr">elghaly</h1>
+<p class="signs" aria-hidden="true">✝️ 🧿 🪬</p>
+<hr class="rule">
 <div class="page">
 <main id="main">
 <section class="quay-hero quay-hero--solo">
@@ -153,12 +260,12 @@
     <div class="card panel" id="where">
       <div class="card__body">
         <h2 class="section__title"><!--i18n:where_title-->Where we are<!--/i18n:where_title--></h2>
-        <p><strong>elghaly, LLC</strong> · <!--i18n:where_contact-->Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.<!--/i18n:where_contact--></p>
+        <p><strong>elghaly, LLC</strong> · <!--i18n:where_contact-->Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls by appointment.<!--/i18n:where_contact--></p>
         <p><!--i18n:where_p1-->QUAY is a remote desk. Support is by email, and the handover call is scheduled to your timezone, not ours. There is no counter to walk into, so hold us to the things you can actually test instead:<!--/i18n:where_p1--></p>
         <ul class="where-list">
           <li><!--i18n:where_li1-->The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.<!--/i18n:where_li1--></li>
           <li><!--i18n:where_li2-->Refunds are unconditional. Ask and the money goes back. That is the cheapest way to find out whether we keep our word.<!--/i18n:where_li2--></li>
-          <li><!--i18n:where_li3-->Start small. <a href="<!--i18n:href_fees-->quay/fees.html<!--/i18n:href_fees-->"><!--i18n:where_li3_link-->$199 buys a written fee review<!--/i18n:where_li3_link--></a><!--i18n:where_li3_tail--> with nothing of yours at risk — no keys, no wallet, no access to anything. Cheaper still: the $29 Flex card pack.<!--/i18n:where_li3_tail--></li>
+          <li><!--i18n:where_li3-->Start small. <!--/i18n:where_li3--><a href="<!--i18n:href_fees-->quay/fees.html<!--/i18n:href_fees-->"><!--i18n:where_li3_link-->$199 buys a written fee review<!--/i18n:where_li3_link--></a><!--i18n:where_li3_tail--> with nothing of yours at risk — no keys, no wallet, no access to anything. Cheaper still: the $29 Flex card pack.<!--/i18n:where_li3_tail--></li>
         </ul>
         <p><!--i18n:where_p2-->We are a small remote operation, not a large supplier with a legal department behind it. If that matters for your purchase, ask before you pay and we will tell you plainly what we can and cannot commit to.<!--/i18n:where_p2--></p>
       </div>
@@ -180,15 +287,47 @@
     </div>
   </details>
 </section>
+<section class="road">
+<svg class="road__svg" aria-hidden="true"><path class="bed" id="bed"/><path class="line" id="line"/></svg>
+<ol class="stops" id="stops" aria-label="<!--i18n:road_aria-->Our projects<!--/i18n:road_aria-->">
+        <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-35-480.webp" width="480" height="480" alt="35" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_35-->35<!--/i18n:road_t_35--></h3><span class="pill p-pv"><!--i18n:road_pill_private-->Private<!--/i18n:road_pill_private--></span><p><!--i18n:road_p_35-->A first look at the 35 project.<!--/i18n:road_p_35--></p><a class="go" href="https://35.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_35-->Open 35<!--/i18n:road_go_35--></a></div></div></li>
+        <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-iris-480.webp" width="480" height="480" alt="Iris" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_iris-->Iris<!--/i18n:road_t_iris--></h3><span class="pill p-on"><!--i18n:road_pill_active-->Active<!--/i18n:road_pill_active--></span><p><!--i18n:road_p_iris-->A clear view, made simple.<!--/i18n:road_p_iris--></p><a class="go" href="https://iris-35.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_iris-->Open Iris<!--/i18n:road_go_iris--></a></div></div></li>
+        <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-plumb-480.webp" width="480" height="480" alt="Plumb" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_plumb-->Plumb<!--/i18n:road_t_plumb--></h3><span class="pill p-on"><!--i18n:road_pill_active-->Active<!--/i18n:road_pill_active--></span><p><!--i18n:road_p_plumb-->Solana desk insight.<!--/i18n:road_p_plumb--></p><a class="go" href="https://plumb-35.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_plumb-->Open Plumb<!--/i18n:road_go_plumb--></a></div></div></li>
+        <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-quay-480.webp" width="480" height="480" alt="Quay" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_quay-->Quay<!--/i18n:road_t_quay--></h3><span class="pill p-on"><!--i18n:road_pill_active-->Active<!--/i18n:road_pill_active--></span><p><!--i18n:road_p_quay-->A storefront for our goods.<!--/i18n:road_p_quay--></p><a class="go" href="https://quay-35.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_quay-->Open Quay<!--/i18n:road_go_quay--></a></div></div></li>
+        <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-stale-480.webp" width="480" height="480" alt="Stale" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_stale-->Stale<!--/i18n:road_t_stale--></h3><span class="pill p-os"><!--i18n:road_pill_oss-->Open Source<!--/i18n:road_pill_oss--></span><p><!--i18n:road_p_stale-->Spot what has gone stale.<!--/i18n:road_p_stale--></p><a class="go" href="https://stale.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_stale-->Open Stale<!--/i18n:road_go_stale--></a> <a class="go go--gh" href="https://github.com/elghaly-dev/stale" rel="noopener noreferrer">GitHub</a></div></div></li>
+        <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-glance-480.webp" width="480" height="480" alt="Glance" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_glance-->Glance<!--/i18n:road_t_glance--></h3><span class="pill p-os"><!--i18n:road_pill_oss-->Open Source<!--/i18n:road_pill_oss--></span><p><!--i18n:road_p_glance-->Market view at a glance.<!--/i18n:road_p_glance--></p><a class="go" href="https://glance.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_glance-->Open Glance<!--/i18n:road_go_glance--></a> <a class="go go--gh" href="https://github.com/elghaly-dev/glance" rel="noopener noreferrer">GitHub</a></div></div></li>
+        <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-stocklana-480.webp" width="480" height="480" alt="Stocklana" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_stocklana-->Stocklana<!--/i18n:road_t_stocklana--></h3><span class="pill p-on"><!--i18n:road_pill_active-->Active<!--/i18n:road_pill_active--></span><p><!--i18n:road_p_stocklana-->Stock insight on Solana.<!--/i18n:road_p_stocklana--></p><a class="go" href="https://stocklana.elghaly.dev/" rel="noopener noreferrer"><!--i18n:road_go_stocklana-->Open Stocklana<!--/i18n:road_go_stocklana--></a></div></div></li>
+        <li class="st R"><i class="node"></i><div class="card"><img src="/assets/emblem-ra-480.webp?v=3" width="480" height="480" alt="رع" loading="lazy" decoding="async"><div class="txt"><h3 dir="rtl" lang="ar"><!--i18n:road_t_ra-->رع<!--/i18n:road_t_ra--></h3><span class="pill p-soon"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span><p><!--i18n:road_p_ra-->Watch the earth from above.<!--/i18n:road_p_ra--></p><span class="go go--off" aria-disabled="true"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span></div></div></li>
+        <li class="st L"><i class="node"></i><div class="card"><img src="/assets/emblem-satar-480.webp?v=3" width="480" height="480" alt="ستار" loading="lazy" decoding="async"><div class="txt"><h3 dir="rtl" lang="ar"><!--i18n:road_t_satar-->ستار<!--/i18n:road_t_satar--></h3><span class="pill p-soon"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span><p><!--i18n:road_p_satar-->Private messaging and prayer companion.<!--/i18n:road_p_satar--></p><span class="go go--off" aria-disabled="true"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span></div></div></li>
+        <li class="st R portrait"><i class="node"></i><div class="card"><img src="/assets/anubis-2-480.webp" width="480" height="480" alt="Anubis" loading="lazy" decoding="async"><div class="txt"><h3><!--i18n:road_t_anubis-->Anubis<!--/i18n:road_t_anubis--></h3><span class="pill p-soon"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span><p><!--i18n:road_p_anubis-->The guardian of the road.<!--/i18n:road_p_anubis--></p><span class="go go--off" aria-disabled="true"><!--i18n:road_soon-->Coming soon<!--/i18n:road_soon--></span></div></div></li>
+        <li class="st L textonly"><i class="node"></i><div class="card"><div class="txt"><h3><span lang="ar" dir="rtl">حتحور</span> · <span lang="hi">हाथोर</span></h3><p><span lang="ar" dir="rtl">المحطة الجاية</span> · <span lang="hi">अगला पड़ाव</span></p><span class="go go--off" aria-disabled="true"><span lang="ar" dir="rtl">قريباً</span> · <span lang="hi">जल्द आ रहा है</span></span></div></div></li>
+      </ol>
+</section>
 </main>
 <footer class="footer">
-  <p><!--i18n:footer_contact-->elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls only by appointment.<!--/i18n:footer_contact--></p>
+  <p><!--i18n:footer_contact-->elghaly, LLC · Email first: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Calls by appointment.<!--/i18n:footer_contact--></p>
   <p class="footer__nav"><a href="https://chatting.elghaly.dev"><!--i18n:footer_chatting-->💬 Chatting<!--/i18n:footer_chatting--></a> · <a href="https://elghaly.dev/about.html"><!--i18n:footer_about-->About<!--/i18n:footer_about--></a> · <a href="mailto:support@elghaly.dev"><!--i18n:footer_contact_link-->Contact<!--/i18n:footer_contact_link--></a> · <a href="#refunds"><!--i18n:footer_refunds-->Refunds<!--/i18n:footer_refunds--></a> · <a href="https://elghaly.dev/delivery.html"><!--i18n:footer_delivery-->Delivery<!--/i18n:footer_delivery--></a> · <a href="https://elghaly.dev/terms.html"><!--i18n:footer_terms-->Terms<!--/i18n:footer_terms--></a> · <a href="https://elghaly.dev/privacy.html"><!--i18n:footer_privacy-->Privacy<!--/i18n:footer_privacy--></a></p>
-  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license"><!--i18n:lic_cc-->© elghaly · CC BY 4.0<!--/i18n:lic_cc--></a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE"><!--i18n:lic_mit-->Code: MIT<!--/i18n:lic_mit--></a> <a href="https://github.com/Alarm2024"><!--i18n:lic_oss-->Open source<!--/i18n:lic_oss--></a> <span><!--i18n:lic_ai-->Public-page analysis with the Faithful Servant<!--/i18n:lic_ai--></span></p>
+  <p class="lic-badges"><a href="https://creativecommons.org/licenses/by/4.0/" rel="license"><!--i18n:lic_cc-->© elghaly · CC BY 4.0<!--/i18n:lic_cc--></a> <a href="https://github.com/Alarm2024/QUAY35/blob/main/LICENSE"><!--i18n:lic_mit-->Code: MIT<!--/i18n:lic_mit--></a> <a href="https://github.com/Alarm2024"><!--i18n:lic_oss-->Open source<!--/i18n:lic_oss--></a> <span><!--i18n:lic_ai-->Public-page analysis with the الغالي<!--/i18n:lic_ai--></span></p>
+      <p class="footer__address">Elghaly LLC · 548 Market St, San Francisco, CA 94104, USA</p>
 </footer>
 </div>
 <script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->page-menu.js" defer></script>
 <script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->js/quay-site.js"></script>
 <script src="<!--i18n:asset_prefix--><!--/i18n:asset_prefix-->pay.js"></script>
+<script>
+document.documentElement.classList.add('js');
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const road=document.querySelector('.road'),stops=[...document.querySelectorAll('.st')],bed=document.getElementById('bed'),line=document.getElementById('line');let len=1;
+function draw(){const r=road.getBoundingClientRect();const pts=stops.map(s=>{const n=s.querySelector('.node').getBoundingClientRect();return[n.left+n.width/2-r.left,n.top+n.height/2-r.top]});
+let d=`M ${r.width/2} 0 L ${pts[0][0]} ${pts[0][1]-30}`;let p=[r.width/2,0];
+d=`M ${r.width/2} 40`;let prev=[r.width/2,40];
+pts.forEach(q=>{const my=(prev[1]+q[1])/2;d+=` C ${prev[0]} ${my}, ${q[0]} ${my}, ${q[0]} ${q[1]}`;prev=q});
+bed.setAttribute('d',d);line.setAttribute('d',d);len=line.getTotalLength();line.style.strokeDasharray=len;upd()}
+function upd(){const r=road.getBoundingClientRect();const y=innerHeight*.75-r.top;const nodes=stops.map(s=>s.querySelector('.node').getBoundingClientRect().top-r.top);
+let f=Math.max(0,Math.min(1,y/r.height));if(window.__force)f=1;line.style.strokeDashoffset=len*(1-f)}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.25});
+stops.forEach(s=>io.observe(s));
+addEventListener('scroll',upd,{passive:true});addEventListener('resize',draw);addEventListener('load',draw);draw();
+</script>
 </body>
 </html>

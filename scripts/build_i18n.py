@@ -182,8 +182,8 @@ STRINGS: dict[str, dict[str, str]] = {
     "fees_cannot_title": {
         "en": "What we cannot tell you from signatures alone",
         "ar": "ما لا نستطيع قوله من التوقيعات وحدها",
-        "ru": "Чего не видно только по подписям",
-        "zh": "仅凭签名无法告知的内容",
+        "ru": "Чего не скажут одни подписи",
+        "zh": "签名无法告知的内容",
     },
     "fees_disclaimer": {
         "en": "This is a written recommendation based on public chain data. We do not touch your config, your wallet, or your transactions. Following the recommendation may not improve your landing rate or lower your cost, and we do not promise that it will. We make no claim about earnings, returns or savings.",
@@ -259,9 +259,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "fees_lede2": {
         "en": "You receive one written page within 48 hours of a complete brief. This is a recommendation, nothing more: we do not change your config, your wallet, or your transactions.",
-        "ar": "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية فقط — لا نغيّر config أو محفظتك أو معاملاتك.",
-        "ru": "Одна страница за 48 ч после полного brief. Только рекомендация — не трогаем config, кошелёк, транзакции.",
-        "zh": "完整 brief 后 48 小时内交付一页书面报告。仅为建议——不改动配置、钱包或交易。",
+        "ar": "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية لا أكثر — لا نغيّر config أو محفظتك أو معاملاتك.",
+        "ru": "Одна страница за 48 ч после полного brief. Это рекомендация, не более — не трогаем config, кошелёк, транзакции.",
+        "zh": "完整 brief 后 48 小时内交付一页书面报告。这是一份建议——不改动配置、钱包或交易。",
     },
     "fees_meta_description": {
         "en": "48-hour priority-fee and tip configuration review from public transaction signatures. $199 once.",
@@ -285,7 +285,7 @@ STRINGS: dict[str, dict[str, str]] = {
         "en": "Once · In English · PayPal or invoice on reply",
         "ar": "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد",
         "ru": "Разово · на английском · PayPal или invoice в ответе",
-        "zh": "一次性 · 仅英文 · PayPal 或回复发票",
+        "zh": "一次性 · 英文 · PayPal 或回复发票",
     },
     "fees_price_p": {
         "en": "Pay with PayPal here and send your brief with the PayPal transaction ID, or send the brief first and pay on the invoice we send when we confirm it. No form on this page collects anything.",
@@ -373,9 +373,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "fees_send_li1": {
         "en": "Just signatures. Never a private key, never a seed phrase, never an RPC URL with a token in it.",
-        "ar": "توقيعات فقط. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
-        "ru": "Только подписи. Никогда private key, seed или RPC с token.",
-        "zh": "仅签名。不要私钥、助记词或带 token 的 RPC。",
+        "ar": "التوقيعات تكفي. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
+        "ru": "Достаточно подписей. Никогда private key, seed или RPC с token.",
+        "zh": "签名就够了。不要私钥、助记词或带 token 的 RPC。",
     },
     "fees_send_li1_b": {
         "en": "Up to 200 transaction signatures",
@@ -462,10 +462,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "About",
     },
     "footer_contact": {
-        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
-        "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
+        "en": "elghaly, LLC · Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "ar": "elghaly, LLC · البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد مسبق.",
         "ru": "elghaly, LLC · Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
-        "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
+        "zh": "elghaly, LLC · 优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话需预约。",
     },
     "footer_contact_link": {
         "en": "Contact",
@@ -672,16 +672,16 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "中文",
     },
     "lic_ai": {
-        "en": "Public-page analysis with the Faithful Servant",
-        "ar": "تحليل لصفحات عامة بمساعدة الخادم الأمين",
-        "ru": "Анализ публичных страниц с Faithful Servant",
-        "zh": "Faithful Servant 辅助分析公开页面",
+        "en": "Public-page analysis with the الغالي",
+        "ar": "تحليل لصفحات عامة بمساعدة الغالي",
+        "ru": "Анализ публичных страниц с الغالي",
+        "zh": "الغالي 辅助分析公开页面",
     },
     "lic_ai_chain": {
-        "en": "Public on-chain data analysis with the Faithful Servant",
-        "ar": "تحليل لبيانات عامة على السلسلة بمساعدة الخادم الأمين",
-        "ru": "Анализ публичных on-chain данных с Faithful Servant",
-        "zh": "Faithful Servant 辅助分析公开链上数据",
+        "en": "Public on-chain data analysis with the الغالي",
+        "ar": "تحليل لبيانات عامة على السلسلة بمساعدة الغالي",
+        "ru": "Анализ публичных on-chain данных с الغالي",
+        "zh": "الغالي 辅助分析公开链上数据",
     },
     "lic_cc": {
         "en": "© elghaly · CC BY 4.0",
@@ -703,9 +703,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "meta_description": {
         "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
-        "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة للقراءة فقط، وتنبيهات مراقبة RPC.",
+        "ar": "تقارير مكتبية لروبوتات سولانا: ورقة أسبوعية للمعاملات الناجحة مقابل الفاشلة، بطاقات إثبات، تقييم للعملة بصلاحية عرض، وتنبيهات مراقبة RPC.",
         "ru": "Отчёты для деска по ботам Solana: еженедельная сводка landed/failed, proof-карты, оценка mint с доступом на просмотр и RPC-watch.",
-        "zh": "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、只读 mint 评分与 RPC 监控提醒。",
+        "zh": "Solana 机器人桌面报告：每周上链/失败对比、证明卡片、查看权限 mint 评分与 RPC 监控提醒。",
     },
     "meta_title": {
         "en": "QUAY — 35 ElGhaly",
@@ -745,9 +745,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "og_description": {
         "en": "Desk reports for Solana bots: a weekly landed-vs-failed paper, proof cards, a view-access mint score and RPC watch pings.",
-        "ar": "تقارير مكتبية لروبوتات سولana: ورقة أسبوعية، بطاقات إثبات، تقييم mint للقراءة فقط، وتنبيهات RPC.",
+        "ar": "تقارير مكتبية لروبوتات سولانا: ورقة أسبوعية، بطاقات إثبات، تقييم mint بصلاحية عرض، وتنبيهات RPC.",
         "ru": "Отчёты для деска по ботам Solana: еженедельная сводка, proof-карты, mint с доступом на просмотр и RPC-watch.",
-        "zh": "Solana 机器人桌面报告：周报、证明卡片、只读 mint 评分与 RPC 提醒。",
+        "zh": "Solana 机器人桌面报告：周报、证明卡片、查看权限 mint 评分与 RPC 提醒。",
     },
     "og_image_alt": {
         "en": "QUAY — desk reports for Solana bots",
@@ -878,7 +878,7 @@ STRINGS: dict[str, dict[str, str]] = {
     "refunds_wallet_body": {
         "en": "back to the address it came from, same asset, same network, within 3 business days, minus the network fee. Send from an address you control; we cannot refund an exchange deposit address.",
         "ar": "إلى العنوان المرسل منه، نفس الأصل والشبكة، خلال 3 أيام عمل ناقص رسوم الشبكة. أرسل من عنوان تتحكم به؛ لا نسترد عنوان إيداع exchange.",
-        "ru": "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Только адрес под вашим контролем; deposit биржи — нет.",
+        "ru": "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Отправляйте с адреса под вашим контролем; на deposit биржи вернуть не можем.",
         "zh": "退回来源地址，同资产同网络，3 个工作日内（扣网络费）。请用您控制的地址；无法退至交易所充值地址。",
     },
     "refunds_wallet_label": {
@@ -895,9 +895,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "score_blurb": {
         "en": "A view-access note on one mint. Not a sell bot, not advice.",
-        "ar": "ملاحظة للقراءة فقط على mint واحد. ليس bot بيع ولا نصيحة.",
+        "ar": "ملاحظة بصلاحية عرض على mint واحد. ليس bot بيع ولا نصيحة.",
         "ru": "Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.",
-        "zh": "单个 mint 只读说明。非卖出机器人，非投资建议。",
+        "zh": "单个 mint 的查看权限说明。非卖出机器人，非投资建议。",
     },
     "score_get": {
         "en": "A written note by email.",
@@ -1063,9 +1063,9 @@ STRINGS: dict[str, dict[str, str]] = {
     },
     "trust1_title": {
         "en": "Public data in",
-        "ar": "بيانات عامة فقط",
-        "ru": "Только публичные данные",
-        "zh": "只用公开数据",
+        "ar": "بيانات عامة",
+        "ru": "Публичные данные",
+        "zh": "公开数据",
     },
     "trust2_body": {
         "en": "No form, no reason, no time limit.",
@@ -1164,10 +1164,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "您发来 feed 之后。",
     },
     "where_contact": {
-        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls only by appointment.",
-        "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد فقط.",
-        "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки только по записи.",
-        "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话仅预约。",
+        "en": "Email first: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Calls by appointment.",
+        "ar": "البريد أولًا: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. المكالمات بموعد مسبق.",
+        "ru": "Сначала email: <a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>. Звонки по записи.",
+        "zh": "优先邮件：<a href=\"mailto:support@elghaly.dev\">support@elghaly.dev</a>。通话需预约。",
     },
     "where_li1": {
         "en": "The four wallet addresses below each link to a public explorer. Open them and read the history before you send anything — that is a check you can run without us.",
@@ -1180,6 +1180,12 @@ STRINGS: dict[str, dict[str, str]] = {
         "ar": "الاسترداد غير مشروط. اطلب فيُرجع المال. أرخص طريقة لمعرفة إن كنا نفي بوعودنا.",
         "ru": "Возврат без условий. Попросили — вернули. Дешёвая проверка, держим ли слово.",
         "zh": "退款无条件。开口即退。这是验证我们是否守诺的最便宜方式。",
+    },
+    "where_li3": {
+        "en": "Start small. ",
+        "ar": "ابدأ بخطوة صغيرة. ",
+        "ru": "Начните с малого. ",
+        "zh": "从小处开始。",
     },
     "where_li3_link": {
         "en": "$199 buys a written fee review",
@@ -1216,6 +1222,198 @@ STRINGS: dict[str, dict[str, str]] = {
         "ar": "35 QUAY ElGhaly",
         "ru": "35 QUAY ElGhaly",
         "zh": "35 QUAY ElGhaly",
+    },
+    "road_aria": {
+        "en": "Our projects",
+        "ar": "مشاريعنا",
+        "ru": "Наши проекты",
+        "zh": "我们的项目",
+    },
+    "road_go_35": {
+        "en": "Open 35",
+        "ar": "افتح 35",
+        "ru": "Открыть 35",
+        "zh": "打开 35",
+    },
+    "road_go_glance": {
+        "en": "Open Glance",
+        "ar": "افتح Glance",
+        "ru": "Открыть Glance",
+        "zh": "打开 Glance",
+    },
+    "road_go_iris": {
+        "en": "Open Iris",
+        "ar": "افتح Iris",
+        "ru": "Открыть Iris",
+        "zh": "打开 Iris",
+    },
+    "road_go_plumb": {
+        "en": "Open Plumb",
+        "ar": "افتح Plumb",
+        "ru": "Открыть Plumb",
+        "zh": "打开 Plumb",
+    },
+    "road_go_quay": {
+        "en": "Open Quay",
+        "ar": "افتح Quay",
+        "ru": "Открыть Quay",
+        "zh": "打开 Quay",
+    },
+    "road_go_stale": {
+        "en": "Open Stale",
+        "ar": "افتح Stale",
+        "ru": "Открыть Stale",
+        "zh": "打开 Stale",
+    },
+    "road_go_stocklana": {
+        "en": "Open Stocklana",
+        "ar": "افتح Stocklana",
+        "ru": "Открыть Stocklana",
+        "zh": "打开 Stocklana",
+    },
+    "road_p_35": {
+        "en": "A first look at the 35 project.",
+        "ar": "نظرة أولى على مشروع 35.",
+        "ru": "Первый взгляд на проект 35.",
+        "zh": "35 项目的初次亮相。",
+    },
+    "road_p_anubis": {
+        "en": "The guardian of the road.",
+        "ar": "حارس الطريق.",
+        "ru": "Страж дороги.",
+        "zh": "道路的守护者。",
+    },
+    "road_p_glance": {
+        "en": "Market view at a glance.",
+        "ar": "نظرة سريعة على السوق.",
+        "ru": "Рынок с одного взгляда.",
+        "zh": "一眼看清市场。",
+    },
+    "road_p_iris": {
+        "en": "A clear view, made simple.",
+        "ar": "رؤية واضحة وبسيطة.",
+        "ru": "Ясный взгляд — просто.",
+        "zh": "清晰视野，简单易用。",
+    },
+    "road_p_plumb": {
+        "en": "Solana desk insight.",
+        "ar": "رؤى لمكتب سولانا.",
+        "ru": "Аналитика для Solana-деска.",
+        "zh": "Solana 交易台洞察。",
+    },
+    "road_p_quay": {
+        "en": "A storefront for our goods.",
+        "ar": "واجهة متجر لمنتجاتنا.",
+        "ru": "Витрина наших товаров.",
+        "zh": "我们商品的店面。",
+    },
+    "road_p_ra": {
+        "en": "Watch the earth from above.",
+        "ar": "شاهد الأرض من الأعلى.",
+        "ru": "Смотрите на Землю сверху.",
+        "zh": "从高处俯瞰地球。",
+    },
+    "road_p_satar": {
+        "en": "Private messaging and prayer companion.",
+        "ar": "رسائل خاصة ورفيق للصلاة.",
+        "ru": "Личные сообщения и спутник в молитве.",
+        "zh": "私密消息与祈祷伴侣。",
+    },
+    "road_p_stale": {
+        "en": "Spot what has gone stale.",
+        "ar": "اكتشف ما أصبح قديمًا.",
+        "ru": "Найдите то, что устарело.",
+        "zh": "找出已过时的内容。",
+    },
+    "road_p_stocklana": {
+        "en": "Stock insight on Solana.",
+        "ar": "رؤى الأسهم على سولانا.",
+        "ru": "Аналитика акций на Solana.",
+        "zh": "Solana 上的股票洞察。",
+    },
+    "road_pill_active": {
+        "en": "Active",
+        "ar": "نشط",
+        "ru": "Работает",
+        "zh": "运行中",
+    },
+    "road_pill_oss": {
+        "en": "Open Source",
+        "ar": "مفتوح المصدر",
+        "ru": "Открытый код",
+        "zh": "开源",
+    },
+    "road_pill_private": {
+        "en": "Private",
+        "ar": "خاص",
+        "ru": "Закрытый",
+        "zh": "私有",
+    },
+    "road_soon": {
+        "en": "Coming soon",
+        "ar": "قريباً",
+        "ru": "Скоро",
+        "zh": "即将推出",
+    },
+    "road_t_35": {
+        "en": "35",
+        "ar": "35",
+        "ru": "35",
+        "zh": "35",
+    },
+    "road_t_anubis": {
+        "en": "Anubis",
+        "ar": "Anubis",
+        "ru": "Anubis",
+        "zh": "Anubis",
+    },
+    "road_t_glance": {
+        "en": "Glance",
+        "ar": "Glance",
+        "ru": "Glance",
+        "zh": "Glance",
+    },
+    "road_t_iris": {
+        "en": "Iris",
+        "ar": "Iris",
+        "ru": "Iris",
+        "zh": "Iris",
+    },
+    "road_t_plumb": {
+        "en": "Plumb",
+        "ar": "Plumb",
+        "ru": "Plumb",
+        "zh": "Plumb",
+    },
+    "road_t_quay": {
+        "en": "Quay",
+        "ar": "Quay",
+        "ru": "Quay",
+        "zh": "Quay",
+    },
+    "road_t_ra": {
+        "en": "رع",
+        "ar": "رع",
+        "ru": "رع",
+        "zh": "رع",
+    },
+    "road_t_satar": {
+        "en": "ستار",
+        "ar": "ستار",
+        "ru": "ستار",
+        "zh": "ستار",
+    },
+    "road_t_stale": {
+        "en": "Stale",
+        "ar": "Stale",
+        "ru": "Stale",
+        "zh": "Stale",
+    },
+    "road_t_stocklana": {
+        "en": "Stocklana",
+        "ar": "Stocklana",
+        "ru": "Stocklana",
+        "zh": "Stocklana",
     },
 }
 

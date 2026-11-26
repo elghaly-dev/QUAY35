@@ -54,9 +54,9 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("score_title", "Score report", "Score report", "Score report")
     add(
         "score_blurb",
-        "ملاحظة للقراءة فقط على mint واحد. ليس bot بيع ولا نصيحة.",
+        "ملاحظة بصلاحية عرض على mint واحد. ليس bot بيع ولا نصيحة.",
         "Заметка с доступом на просмотр по одному mint. Не sell-бот и не совет.",
-        "单个 mint 只读说明。非卖出机器人，非投资建议。",
+        "单个 mint 的查看权限说明。非卖出机器人，非投资建议。",
     )
     add("score_send", "عنوان الـ mint.", "Адрес mint.", "mint 地址。")
     add("score_get", "ملاحظة مكتوبة بالبريد.", "Письменная заметка по email.", "邮件书面说明。")
@@ -141,7 +141,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add(
         "refunds_wallet_body",
         "إلى العنوان المرسل منه، نفس الأصل والشبكة، خلال 3 أيام عمل ناقص رسوم الشبكة. أرسل من عنوان تتحكم به؛ لا نسترد عنوان إيداع exchange.",
-        "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Только адрес под вашим контролем; deposit биржи — нет.",
+        "На адрес отправителя, тот же asset и сеть, за 3 раб. дня минус fee. Отправляйте с адреса под вашим контролем; на deposit биржи вернуть не можем.",
         "退回来源地址，同资产同网络，3 个工作日内（扣网络费）。请用您控制的地址；无法退至交易所充值地址。",
     )
     add(
@@ -154,9 +154,9 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("where_title", "أين نحن", "Где мы", "我们在哪")
     add(
         "where_contact",
-        'البريد أولًا: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. المكالمات بموعد فقط.',
-        'Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки только по записи.',
-        '优先邮件：<a href="mailto:support@elghaly.dev">support@elghaly.dev</a>。通话仅预约。',
+        'البريد أولًا: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. المكالمات بموعد مسبق.',
+        'Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки по записи.',
+        '优先邮件：<a href="mailto:support@elghaly.dev">support@elghaly.dev</a>。通话需预约。',
     )
     add(
         "where_p1",
@@ -218,9 +218,9 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
 
     add(
         "footer_contact",
-        'elghaly, LLC · البريد أولًا: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. المكالمات بموعد فقط.',
+        'elghaly, LLC · البريد أولًا: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. المكالمات بموعد مسبق.',
         'elghaly, LLC · Сначала email: <a href="mailto:support@elghaly.dev">support@elghaly.dev</a>. Звонки по записи.',
-        'elghaly, LLC · 优先邮件：<a href="mailto:support@elghaly.dev">support@elghaly.dev</a>。通话仅预约。',
+        'elghaly, LLC · 优先邮件：<a href="mailto:support@elghaly.dev">support@elghaly.dev</a>。通话需预约。',
     )
     add("footer_about", "About", "About", "About")
     add("footer_contact_link", "Contact", "Contact", "Contact")
@@ -233,13 +233,13 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("lic_oss", "Open source", "Open source", "Open source")
     add(
         "lic_ai",
-        "تحليل لصفحات عامة بمساعدة الخادم الأمين",
+        "تحليل لصفحات عامة بمساعدة الغالي",
         "Анализ публичных страниц с Faithful Servant",
         "Faithful Servant 辅助分析公开页面",
     )
     add(
         "lic_ai_chain",
-        "تحليل لبيانات عامة على السلسلة بمساعدة الخادم الأمين",
+        "تحليل لبيانات عامة على السلسلة بمساعدة الغالي",
         "Анализ публичных on-chain данных с Faithful Servant",
         "Faithful Servant 辅助分析公开链上数据",
     )
@@ -262,9 +262,9 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     )
     add(
         "fees_lede2",
-        "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية فقط — لا نغيّر config أو محفظتك أو معاملاتك.",
-        "Одна страница за 48 ч после полного brief. Только рекомендация — не трогаем config, кошелёк, транзакции.",
-        "完整 brief 后 48 小时内交付一页书面报告。仅为建议——不改动配置、钱包或交易。",
+        "صفحة مكتوبة واحدة خلال 48 ساعة من brief كامل. توصية لا أكثر — لا نغيّر config أو محفظتك أو معاملاتك.",
+        "Одна страница за 48 ч после полного brief. Это рекомендация, не более — не трогаем config, кошелёк, транзакции.",
+        "完整 brief 后 48 小时内交付一页书面报告。这是一份建议——不改动配置、钱包或交易。",
     )
     add("fees_send_title", "ما ترسل", "Что прислать", "您需提供")
     add(
@@ -276,9 +276,9 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("fees_send_li1_b", "حتى 200 توقيع معاملة", "До 200 подписей транзакций", "最多 200 条交易签名")
     add(
         "fees_send_li1",
-        "توقيعات فقط. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
-        "Только подписи. Никогда private key, seed или RPC с token.",
-        "仅签名。不要私钥、助记词或带 token 的 RPC。",
+        "التوقيعات تكفي. لا مفتاح خاص، لا seed phrase، لا RPC يحتوي token.",
+        "Достаточно подписей. Никогда private key, seed или RPC с token.",
+        "签名就够了。不要私钥、助记词或带 token 的 RPC。",
     )
     add("fees_send_li2_b", "إعداد priority fee الحالي", "Текущий priority fee", "当前优先费设置")
     add("fees_send_li3_b", "إعداد الإكرامية الحالي", "Текущий tip", "当前小费设置")
@@ -305,8 +305,8 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add(
         "fees_cannot_title",
         "ما لا نستطيع قوله من التوقيعات وحدها",
-        "Чего не видно только по подписям",
-        "仅凭签名无法告知的内容",
+        "Чего не скажут одни подписи",
+        "签名无法告知的内容",
     )
     add(
         "fees_cannot_intro",
@@ -349,7 +349,7 @@ def register_part2(add: Callable[[str, str, str, str], None]) -> None:
     add("fees_sample_overpay", "دفع زائد", "Переплата", "多付")
     add("fees_sample_unknown", "تعذّر التحديد (UNKNOWN)", "Could not determine (UNKNOWN)", "无法确定 (UNKNOWN)")
     add("fees_price_title", "السعر والاستلام", "Цена и intake", "价格与提交")
-    add("fees_price_note", "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد", "Разово · на английском · PayPal или invoice в ответе", "一次性 · 仅英文 · PayPal 或回复发票")
+    add("fees_price_note", "مرة واحدة · بالإنجليزية · PayPal أو فاتورة في الرد", "Разово · на английском · PayPal или invoice в ответе", "一次性 · 英文 · PayPal 或回复发票")
     add(
         "fees_price_p",
         "ادفع PayPal هنا وأرسل brief مع PayPal transaction ID، أو أرسل brief أولًا وادفع على الفاتورة عند التأكيد. لا نموذج على هذه الصفحة.",

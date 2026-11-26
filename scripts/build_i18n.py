@@ -672,16 +672,16 @@ STRINGS: dict[str, dict[str, str]] = {
         "zh": "中文",
     },
     "lic_ai": {
-        "en": "Public-page analysis with the Faithful Servant",
+        "en": "Public-page analysis with the الغالي",
         "ar": "تحليل لصفحات عامة بمساعدة الخادم الأمين",
-        "ru": "Анализ публичных страниц с Faithful Servant",
-        "zh": "Faithful Servant 辅助分析公开页面",
+        "ru": "Анализ публичных страниц с الغالي",
+        "zh": "الغالي 辅助分析公开页面",
     },
     "lic_ai_chain": {
-        "en": "Public on-chain data analysis with the Faithful Servant",
+        "en": "Public on-chain data analysis with the الغالي",
         "ar": "تحليل لبيانات عامة على السلسلة بمساعدة الخادم الأمين",
-        "ru": "Анализ публичных on-chain данных с Faithful Servant",
-        "zh": "Faithful Servant 辅助分析公开链上数据",
+        "ru": "Анализ публичных on-chain данных с الغالي",
+        "zh": "الغالي 辅助分析公开链上数据",
     },
     "lic_cc": {
         "en": "© elghaly · CC BY 4.0",
